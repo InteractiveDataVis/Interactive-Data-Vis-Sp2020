@@ -5,7 +5,7 @@ This repository contains the starter code for each of the 7 tutorials.
 
 1. Make sure the following are installed:
 
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version control softwar
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version control software
 - [Node](https://nodejs.org/en/download/) - javascript development software
 - [VS Code](https://code.visualstudio.com/) - free code editor and IDE (our recommendation)
 
