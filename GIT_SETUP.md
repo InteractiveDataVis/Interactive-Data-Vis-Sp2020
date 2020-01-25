@@ -6,9 +6,10 @@ You can read more about this github flow [here](https://help.github.com/en/githu
 
 ### 2. Fork This repository into your own account
 
-![](./lib/assets/fork.png)
+<img src='./lib/assets/fork.png' width='500px'>
+
 You will now have a copy of the course repository on your own github account:
-![](./lib/assets/forked.png)
+<img src='./lib/assets/forked.png' width='500px'>
 
 ### 3. On GitHub, navigate to **your fork** of the repository and clone it to your local computer.
 
@@ -42,8 +43,8 @@ check remote branches again to ensure that the update worked
 
 ```sh
 $ git remote -v
-> origin	https://github.com/auchers/Interactive-Data-Vis-Sp2020 (fetch)
-> origin	https://github.com/auchers/Interactive-Data-Vis-Sp2020 (push)
+> origin	https://github.com/YOUR_USERNAME/Interactive-Data-Vis-Sp2020 (fetch)
+> origin	https://github.com/YOUR_USERNAME/Interactive-Data-Vis-Sp2020 (push)
 > upstream	https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020.git (fetch)
 > upstream	https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020.git (push)
 
@@ -72,4 +73,4 @@ $ git push
 
 To deploy your site on [Github Pages](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) you can go to your repository's `Settings` tab and then scroll down to `GitHub Pages` section. Select `master branch` as source and then your site will be avallable.
 
-![](./lib/assets/pages.png)
+<img src='./lib/assets/pages.png' width='500px'>
