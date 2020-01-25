@@ -2,15 +2,15 @@
 
 You can read more about this github flow [here](https://help.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-## 1. On Gitub, go to [Class Repository](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020).
+### 1. On Gitub, go to [Class Repository](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020).
 
-## 2. Fork This repository into your own account
+### 2. Fork This repository into your own account
 
 ![](./lib/assets/fork.png)
 You will now have a copy of the course repository on your own github account:
 ![](./lib/assets/forked.png)
 
-## 3. On GitHub, navigate to **your fork** of the repository and clone it to your local computer.
+### 3. On GitHub, navigate to **your fork** of the repository and clone it to your local computer.
 
 ```sh
 # from Terminal:
@@ -22,7 +22,7 @@ $ git clone https://github.com/YOUR_USERNAME/Interactive-Data-Vis-Sp2020
 $ cd Interactive-Data-Vis-Sp2020
 ```
 
-## 4. Set up your local repository so that it links back to the course repository.
+### 4. Set up your local repository so that it links back to the course repository.
 
 see current remote branches
 
@@ -49,7 +49,7 @@ $ git remote -v
 
 ```
 
-## 5. Keep your branch [synced](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced)
+### 5. Keep your branch [synced](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced)
 
 ```sh
 $ git fetch upstream
@@ -62,7 +62,7 @@ $ git merge upstream/master
 # merges the changes from upstream into your current branch
 ```
 
-## 6. Push up and deploy your changes
+### 6. Push up and deploy your changes
 
 When you are ready to push up your code, you can run:
 
