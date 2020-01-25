@@ -51,4 +51,25 @@ $ git remote -v
 
 ## 5. Keep your branch [synced](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced)
 
-## 6. Push up your changes
+```sh
+$ git fetch upstream
+# pulls the upstream changes and stores them in `upstream/master`
+
+```
+
+```sh
+$ git merge upstream/master
+# merges the changes from upstream into your current branch
+```
+
+## 6. Push up and deploy your changes
+
+When you are ready to push up your code, you can run:
+
+```sh
+$ git push
+```
+
+To deploy your site on [Github Pages](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site) you can go to your repository's `Settings` tab and then scroll down to `GitHub Pages` section. Select `master branch` as source and then your site will be avallable.
+
+![](./lib/assets/pages.png)
