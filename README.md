@@ -1,6 +1,7 @@
 # CUNY-Spring-2020
 
-Course material for Interactive Data Visualization (DATA 73200) taught at CUNY Spring Semester, 2020
+Course material for Interactive Data Visualization (DATA 73200) taught at CUNY Spring Semester, 2020.
+
 This repository contains the starter code for each of the 7 tutorials.
 
 1. Make sure the following are installed:
@@ -16,6 +17,8 @@ This repository contains the starter code for each of the 7 tutorials.
 4. Start creating awesome visualizations 🎉!
 
 ## List of Tutorials
+
+(Code for each tutorial will be released on the week that we cover that topic)
 
 Tutorial 1 - Introduction - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial1_intro), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial1_intro)
 
