@@ -4,6 +4,8 @@ Course material for Interactive Data Visualization (DATA 73200) taught at CUNY S
 
 This repository contains the starter code for each of the 7 tutorials.
 
+## Setup
+
 1. Make sure the following are installed:
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version control software
