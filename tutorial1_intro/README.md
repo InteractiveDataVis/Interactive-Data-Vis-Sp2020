@@ -21,7 +21,7 @@ From this level, (_not from the tutorial folder_), you should run `serve`. When 
 
 ## Assignment:
 
-1. Review the [demo code](demo/) and understand how the code works.
+1. Review the [demo code](demo/) and understand how the code works
 2. Replicate the process for **your own dataset** in the files present in the root of this directory ([index.html](index.html), [style.css](style.css), [main.js](main.js))
 3. Use the Github workflow to deploy your work to **your fork** of the course repository
 4. Post the link to your deployed example on the Commons. **//TODO: check this @Ellie**
