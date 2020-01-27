@@ -34,5 +34,7 @@ d3.csv("../../data/surveyResults.csv").then(data => {
     .selectAll("td")
     .data(d => Object.values(d))
     .join("td")
+    // update the below logic to apply to your dataset
+    .attr("class", d => +d > 3 ? 'high' : null)
     .text(d => d);
 });
