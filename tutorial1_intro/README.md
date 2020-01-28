@@ -22,17 +22,19 @@ From this level, (_not from the tutorial folder_), you should run `serve`. When 
 ## Week 1 Assignment:
 
 ### System Preparation
-1. Complete the tech set up, including [git setup](../GIT_SETUP.md) (forking, cloning, setting upstream, etc) and getting a [basic server](../BASIC_SERVER.md) up and running
+1. Go through our setup flow -- this includes [installations](../README.md#setup), the [git setup](../GIT_SETUP.md) (forking, cloning, setting upstream, etc.) and getting a [basic server](../BASIC_SERVER.md) up and running
 2. Review the [demo code](demo/) and understand how the code works
 
 ### Code Build
-3. Replicate the process for **your own dataset** in the files present in the root of this directory ([index.html](index.html), [style.css](style.css), [main.js](main.js))
-4. Update the logic determining cell classname to apply to your dataset
-5. **[BONUS:]** Add logic to update the classname of an entire row, not just one cell
+1. Replicate the process for **your own dataset**. This will involve finding/creating a suitable dataset, saving it somewhere in your repository, and writing the code. You should leverage the files present in the root of this directory (`tutorial1_intro/`: [index.html](index.html), [style.css](style.css), [main.js](main.js))
+2. Update the table's conditional formatting to highlight something meaningful for your new dataset. This may include changing the logic the [class](https://github.com/d3/d3-selection#selection_classed), adding another [attribute](https://github.com/d3/d3-selection#selection_attr), or directly augmenting the cell's [style](https://github.com/d3/d3-selection#selection_style).
+3. **[BONUS:]** 
+    * Add logic to update the appearance of an _entire row_ (not just a single cell). 
+    * Add a summary row for totals/averages of your data.
 
 ### Deplopy
 6. Use the Github workflow to deploy your work to **your fork** of the course repository
-7. Post the link to your deployed example on the Commons. (Note: your link should look something like: `https://YOUR_USERNAME.github.io/Interactive-Data-Vis-Sp2020/tutorial1_intro/`)
+7. Post the link to your deployed example as a post on the Commons. (Note: your link should look something like: `https://YOUR_USERNAME.github.io/Interactive-Data-Vis-Sp2020/tutorial1_intro/`)
 
 ## Resources:
 
