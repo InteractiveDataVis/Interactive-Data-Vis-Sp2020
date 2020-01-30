@@ -1,5 +1,5 @@
 // load in csv
-d3.csv("../../data/surveyResults.csv").then(data => {
+d3.csv("/data/surveyResults.csv").then(data => {
   // once the data loads, console log it
   console.log("data", data);
 
@@ -35,6 +35,6 @@ d3.csv("../../data/surveyResults.csv").then(data => {
     .data(d => Object.values(d))
     .join("td")
     // update the below logic to apply to your dataset
-    .attr("class", d => +d > 3 ? 'high' : null)
+    .attr("class", d => (+d > 3 ? "high" : null))
     .text(d => d);
 });
