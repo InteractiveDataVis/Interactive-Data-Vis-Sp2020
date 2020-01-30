@@ -23,18 +23,18 @@ After each installation,
 
 ## List of Tutorials
 
-(Code for each tutorial will be released on the week that we cover that topic)
+Code for each tutorial will be released on the week that we cover that topic.
 
-Tutorial 1 - Introduction - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial1_intro), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial1_intro)
+Tutorial 1 - Introduction - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial1_intro), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial1_intro/demo)
 
-Tutorial 2 - Quantities and Amounts - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial2_quantities_and_amounts), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial2_quantities_and_amounts)
+Tutorial 2 - Quantities and Amounts - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial2_quantities_and_amounts), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial2_quantities_and_amounts/demo)
 
-Tutorial 3 - Distributions - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial3_distributions), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial3_distributions)
+Tutorial 3 - Distributions - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial3_distributions), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial3_distributions/demo)
 
-Tutorial 4 - Timeseries - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial4_timeseries), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial4_timeseries)
+Tutorial 4 - Timeseries - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial4_timeseries), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial4_timeseries/demo)
 
-Tutorial 5 - Geographic - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial5_geographic), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial5_geographic)
+Tutorial 5 - Geographic - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial5_geographic), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial5_geographic/demo)
 
-Tutorial 6 - Hierarchical - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial6_hierarchical), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial6_hierarchical)
+Tutorial 6 - Hierarchical - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial6_hierarchical), [demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial6_hierarchical/demo)
 
-Tutorial 7 - State Management - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial7_state_management) ,[demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial7_state_management)
+Tutorial 7 - State Management - [code](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Sp2020/tree/master/tutorial7_state_management) ,[demo](https://interactivedatavis.github.io/Interactive-Data-Vis-Sp2020/tutorial7_state_management/demo)
