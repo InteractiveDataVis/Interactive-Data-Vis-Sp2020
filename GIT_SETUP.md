@@ -56,6 +56,7 @@ $ git remote -v
 ### 5. Keep your branch [synced](https://help.github.com/en/github/getting-started-with-github/fork-a-repo#keep-your-fork-synced).
 
 Make sure to do this before working on new code (before each tutorial) to ensure that you are working off of the latest updates.
+We will be updating the course repository throughout the semester, and this command will update your fork to include the changes we made, including that week's class example or other materials we have added.
 
 ```sh
 # pulls the upstream changes and stores them in `upstream/master`
