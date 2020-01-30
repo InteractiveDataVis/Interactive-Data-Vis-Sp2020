@@ -43,4 +43,8 @@ To receive full credit, you must post your stable path before the start of the n
 
 [Javascript Fundamentals](https://javascript.info/first-steps)
 
+[Javascript Object Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics) (We recommend that you get comfortable with everyhing up to the 'What is "this"?' section)
+
 [How to use github](https://git-scm.com/book/en/v2)
+
+[Guide to CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
