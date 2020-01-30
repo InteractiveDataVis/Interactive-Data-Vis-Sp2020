@@ -32,7 +32,7 @@ To receive full credit, you must post your stable path before the start of the n
 ## Week 1 Assignment:
 
 - [ ] Replicate the process for **your own dataset**. This will involve finding/creating a suitable dataset, saving it somewhere in your repository, and writing the code. You should leverage the files present in the root of this directory (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js))
-- [ ] Update the table's conditional formatting to highlight something meaningful for your new dataset. This may include changing the logic the [class](https://github.com/d3/d3-selection#selection_classed), adding another [attribute](https://github.com/d3/d3-selection#selection_attr), or directly augmenting the cell's [style](https://github.com/d3/d3-selection#selection_style).
+- [ ] Update the table's conditional formatting to highlight something meaningful for your new dataset. This may include changing the logic for the cell's [class](https://github.com/d3/d3-selection#selection_classed), adding another [attribute](https://github.com/d3/d3-selection#selection_attr), or directly augmenting the cell's [style](https://github.com/d3/d3-selection#selection_style).
 
 **BONUS:**
 
