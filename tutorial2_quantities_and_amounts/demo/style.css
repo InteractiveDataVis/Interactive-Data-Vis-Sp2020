@@ -1,0 +1,13 @@
+header {
+  padding: 1em 3em;
+}
+
+rect.bar {
+  fill: pink;
+}
+
+rect.bar:hover {
+  fill: darkmagenta;
+  stroke: black;
+  stroke-width: 3px;
+}
