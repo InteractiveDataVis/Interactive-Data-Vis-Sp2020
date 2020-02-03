@@ -1,12 +1,14 @@
 header {
   padding: 1em 3em;
+  /* ref: https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans */
+  font-family: "Open Sans", sans-serif;
 }
 
-rect.bar {
+.bar rect {
   fill: pink;
 }
 
-rect.bar:hover {
+.bar rect:hover {
   fill: darkmagenta;
   stroke: black;
   stroke-width: 3px;

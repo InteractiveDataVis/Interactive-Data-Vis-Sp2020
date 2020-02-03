@@ -13,7 +13,7 @@ console.log("data", data);
 let width = window.innerWidth,
   height = window.innerHeight / 2,
   barPadding = 0.05, // number 0-1,
-  margins = { top: 10, bottom: 10, left: 50, right: 50 };
+  margins = { top: 20, bottom: 10, left: 50, right: 50 };
 
 // animation constants
 let delay = 50,
@@ -46,20 +46,38 @@ const svg = d3
   .attr("height", height);
 
 // ref: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
-const bar = svg
-  .selectAll("rect")
+const barGroup = svg
+  .selectAll("g.bar")
   .data(data)
-  .join("rect")
+  .join("g")
   .attr("class", "bar")
-  .attr("x", d => xScale(d))
-  .attr("y", d => yScale(d))
-  .attr("y", d => height - margins.bottom)
+  .attr(
+    "transform",
+    d => `translate(${xScale(d)}, ${height - margins.bottom})`
+  );
+
+const rect = barGroup
+  .append("rect")
   .attr("width", xScale.bandwidth())
   .attr("height", 0);
 
-bar
+const text = barGroup
+  .append("text")
+  .attr("x", xScale.bandwidth() / 2)
+  .attr("dy", -3)
+  .style("text-anchor", "middle")
+  .text(d => d);
+
+// transition definition
+const t = d3
   .transition()
   .duration(duration)
-  .delay((d, i) => i * delay)
-  .attr("y", d => yScale(d))
-  .attr("height", d => yScale(0) - yScale(d));
+  .delay((d, i) => i * delay);
+
+// transition position of the bar group
+barGroup
+  .transition(t)
+  .attr("transform", d => `translate(${xScale(d)}, ${yScale(d)})`);
+
+// transition height of the rect
+rect.transition(t).attr("height", d => yScale(0) - yScale(d));
