@@ -8,14 +8,3 @@ svg {
   /* temporary border to help see svg margins */
   border: 5px solid orange;
 }
-
-.hover-text {
-  text-anchor: middle;
-  fill: white;
-  opacity: 0;
-}
-
-/* when the user hovers over a bar, show the text */
-g:hover .hover-text {
-  opacity: 1;
-}

@@ -17,8 +17,6 @@ d3.csv("../../data/surveyResults.csv", d => {
     height = window.innerHeight / 3,
     paddingInner = 0.2,
     margin = { top: 20, bottom: 20, left: 50, right: 50 },
-    duration = 1000,
-    delay = 20;
 
   /** SCALES */
   const xScale = d3
@@ -73,13 +71,13 @@ d3.csv("../../data/surveyResults.csv", d => {
   // transitions
   group
     .transition()
-    .delay((d, i) => delay * i)
-    .duration(duration)
+    .delay((d, i) => 20 * i)
+    .duration(1000)
     .attr("transform", (d, i) => `translate(${xScale(i)}, ${yScale(d.d3)})`);
 
   rects
     .transition()
-    .delay((d, i) => delay * i)
-    .duration(duration)
+    .delay((d, i) => 20 * i)
+    .duration(1000)
     .attr("height", d => height - margin.bottom - yScale(d.d3));
 });
