@@ -1,10 +1,14 @@
 body {
-  /* ref: https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans */
-  font-family: "Open Sans", sans-serif;
+  /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 1em 3em;
 }
 
-svg {
-  /* temporary border to help see svg margins */
-  border: 5px solid orange;
+.label {
+  fill: white;
+  text-anchor: middle;
+}
+
+.axis {
+  font-size: 20;
 }
