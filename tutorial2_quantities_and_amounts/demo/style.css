@@ -1,15 +1,21 @@
-header {
-  padding: 1em 3em;
+body {
   /* ref: https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans */
   font-family: "Open Sans", sans-serif;
+  padding: 1em 3em;
 }
 
-.bar rect {
-  fill: pink;
+svg {
+  /* temporary border to help see svg margins */
+  border: 5px solid orange;
 }
 
-.bar rect:hover {
-  fill: darkmagenta;
-  stroke: black;
-  stroke-width: 3px;
+.hover-text {
+  text-anchor: middle;
+  fill: white;
+  opacity: 0;
+}
+
+/* when the user hovers over a bar, show the text */
+g:hover .hover-text {
+  opacity: 1;
 }

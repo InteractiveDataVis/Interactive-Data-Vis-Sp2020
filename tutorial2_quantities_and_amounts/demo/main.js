@@ -1,116 +1,85 @@
-/***********
- * CONSTANTS
- *
- * */
-data = createRandomData();
-console.log("data", data);
+// data load
+d3.csv("../../data/surveyResults.csv", d => {
+  // clean up data - "+" converts the field to be a number
+  return {
+    timestamp: new Date(d.Timestamp),
+    python: +d["Python or R (or data analysis tool)"],
+    terminal: +d["Terminal (Bash/Zsh)"],
+    github: +d["Git / Github"],
+    html_css: +d["HTML / CSS"],
+    javascript: +d["Javascript"],
+    d3: +d["d3.js"],
+  };
+}).then(data => {
+  console.log(data);
+  /** CONSTANTS */
+  const width = window.innerWidth * 0.9,
+    height = window.innerHeight / 3,
+    paddingInner = 0.2,
+    margin = { top: 20, bottom: 20, left: 50, right: 50 },
+    duration = 1000,
+    delay = 20;
 
-// size and margins
-let width = window.innerWidth,
-  height = window.innerHeight / 2,
-  barPadding = 0.05, // number 0-1, percent of space
-  margins = { top: 20, bottom: 10, left: 50, right: 50 };
-
-// animation constants
-let delay = 100,
-  duration = 800;
-
-// initial state
-let isAscendingOrder = true;
-
-/**
- * MAIN CODE
- *
- * */
-// add svg to our html
-const svg = d3
-  .select("#d3-container")
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height);
-
-draw();
-
-// ref: https://github.com/d3/d3-selection#handling-events
-const button = d3.select("#data-button").on("click", () => {
-  isAscendingOrder = !isAscendingOrder;
-  draw(); // redraw with the new data
-});
-
-/** DRAW FUNCTION */
-function draw() {
-  // sort data
-  const sortOrder = isAscendingOrder ? d3.ascending : d3.descending;
-  data = [...data.sort(sortOrder)];
-
-  // scales
-  // ref: https://github.com/d3/d3-scale
+  /** SCALES */
   const xScale = d3
-    .scaleBand() // ref: https://github.com/d3/d3-scale#band-scales
-    .domain(data)
-    .range([margins.left, width - margins.right])
-    .paddingInner(barPadding);
+    .scaleBand()
+    .domain(d3.range(data.length))
+    .range([margin.left, width - margin.right])
+    .paddingInner(paddingInner);
 
-  // ref: https://github.com/d3/d3-array#extent -- returns [min, max] of array
   const yScale = d3
     .scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([height - margins.bottom, margins.top]);
+    .domain([0, d3.max(data, d => d.d3)])
+    .range([height - margin.bottom, margin.top]);
 
-  // transition definition
-  const t = d3.transition().duration(duration);
+  const yAxis = d3.axisLeft(yScale).ticks(5);
 
-  const barGroup = svg
-    .selectAll("g.bar")
-    .data(data, d => d)
-    .join(
-      enter =>
-        enter
-          .append("g")
-          .attr("class", "bar")
-          .attr("transform", d => `translate(${xScale(d)}, ${yScale(0)})`)
-          .call(sel =>
-            sel // rect element
-              .append("rect")
-              .attr("width", xScale.bandwidth())
-              .attr("height", 0)
-              .transition(t)
-              .delay((d, i) => i * delay)
-              .attr("width", xScale.bandwidth())
-              .attr("height", d => yScale(0) - yScale(d))
-          )
-          .call(sel =>
-            sel // text element
-              .append("text")
-              .attr("x", xScale.bandwidth() / 2)
-              .attr("dy", -3)
-              .style("text-anchor", "middle")
-              .text(d => d)
-          )
-          .call(sel =>
-            sel // group position transition
-              .transition(t)
-              .delay((d, i) => i * delay)
-              .attr("transform", d => `translate(${xScale(d)}, ${yScale(d)})`)
-          ),
-      update =>
-        update.call(sel =>
-          sel // group position transition
-            .transition(t)
-            .delay((d, i) => i * delay)
-            .attr("transform", d => `translate(${xScale(d)}, ${yScale(d)})`)
-        )
+  /** MAIN CODE */
+  const svg = d3
+    .select("#d3-container")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  // main group
+  const group = svg
+    .selectAll("g")
+    .data(data)
+    .join("g")
+    .attr(
+      "transform",
+      (d, i) => `translate(${xScale(i)}, ${height - margin.bottom})`
     );
-}
 
-/** HELPER FUNCTIONS */
-function createRandomData() {
-  // create a random dataset
-  let maxNumBars = 10,
-    maxNumber = 100;
+  // rects
+  const rects = group
+    .append("rect")
+    .attr("width", xScale.bandwidth())
+    .attr("height", 0);
 
-  return d3
-    .range(maxNumBars)
-    .map(d => Math.floor(Math.random() * maxNumber))
-    .slice(0, Math.floor(maxNumBars / 2 + Math.random() * maxNumBars));
-}
+  // text
+  group
+    .append("text")
+    .attr("class", "hover-text")
+    .attr("dy", "1.25em")
+    .attr("x", xScale.bandwidth() / 2)
+    .text(d => d.d3);
+
+  svg
+    .append("g")
+    .attr("transform", `translate(${margin.left - 5}, 0)`)
+    .call(yAxis);
+
+  // transitions
+  group
+    .transition()
+    .delay((d, i) => delay * i)
+    .duration(duration)
+    .attr("transform", (d, i) => `translate(${xScale(i)}, ${yScale(d.d3)})`);
+
+  rects
+    .transition()
+    .delay((d, i) => delay * i)
+    .duration(duration)
+    .attr("height", d => height - margin.bottom - yScale(d.d3));
+});
