@@ -49,6 +49,7 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then(data => {
     .data(data)
     .join("text")
     .attr("class", "label")
+    // this allows us to position the text in the center of the bar
     .attr("x", d => xScale(d.activity) + (xScale.bandwidth() / 2))
     .attr("y", d => yScale(d.count))
     .text(d => d.count)

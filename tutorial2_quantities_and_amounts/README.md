@@ -2,10 +2,11 @@
 
 The goals for this tutorial are:
 
-- to get comfortable with the [Github workflow](../GIT_SETUP.md), and with using their [local development environment](../README.md).
-- to understand how to load in a dataset using [d3-fetch](https://github.com/d3/d3-fetch) (d3.json, d3.csv, etc.).
-- to introduce [HTML svg](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) coordinate system and how [d3-scales](https://bost.ocks.org/mike/selection/) can place graphical primitives on the page.
-- to practice creating a simple bar chart.
+- continuing to get comfortable with the [Github workflow](../GIT_SETUP.md), and with using your [local development environment](../README.md).
+- to introduce [HTML svg](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) coordinate system 
+- to learn how [d3-scales](https://github.com/d3/d3-scale) can place graphical primitives on the page
+- to add axes to an svg using [d3-axis](https://github.com/d3/d3-axis)
+- to learn the tools to make your own bar chart
 
 ## How to setup, serve, and deploy:
 
@@ -41,7 +42,7 @@ To receive full credit, you must post your stable path before the start of the n
 
 ## Week 2 Assignment:
 
-- [ ] Replicate the visual for either the same dataset, or a new one. As you do each week, you should leverage the files present in the root of this directory (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js))
+- [ ] Implement your own bar chart in the files present in the root of this directory  (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js)). You may use the existing dataset, or a new one.
 - [ ] Add a [color scale](https://github.com/d3/d3-scale-chromatic) to your bar chart. 
 
 **BONUS:**
