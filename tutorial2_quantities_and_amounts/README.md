@@ -34,20 +34,21 @@ You can view our class **demo site** at `http://localhost:5000/TUTORIAL_PATH/dem
 
 As you're working on the assignment, you can always reference the [demo code](demo/).
 
+## Week 2 Assignment:
+
+- [ ] Implement your own bar chart in the files present in the root of this directory  (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js)). You may use the existing dataset, or a new one.
+- [ ] Add a [color scale](https://github.com/d3/d3-scale-chromatic) to your bar chart. 
+- [ ] Post your [deployed](#Deploy) link to the appropriate post on the Commons.
+
+**BONUS:**
+
+- [ ] Turn this **vertical bar chart** into a **horizontal bar chart**.
+
 ### Deploy
 
 Once you've completed the assignment, use the Github workflow to deploy your work to **your fork** of the course repository. Post the link to your deployed example as a comment to the appropriate post on the Commons. (Note: your link will look something like: `https://YOUR_USERNAME.github.io/Interactive-Data-Vis-Sp2020/TUTORIAL_PATH/`)
 
 To receive full credit, you must post your stable path before the start of the next class.
-
-## Week 2 Assignment:
-
-- [ ] Implement your own bar chart in the files present in the root of this directory  (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js)). You may use the existing dataset, or a new one.
-- [ ] Add a [color scale](https://github.com/d3/d3-scale-chromatic) to your bar chart. 
-
-**BONUS:**
-
-- [ ] Turn this **vertical bar chart** into a **horizontal bar chart**.
 
 ## Resources:
 
