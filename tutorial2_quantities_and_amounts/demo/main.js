@@ -1,38 +1,30 @@
 // data load
-d3.csv("../../data/surveyResults.csv", d => {
-  // clean up data - "+" converts the field to be a number
-  return {
-    timestamp: new Date(d.Timestamp),
-    python: +d["Python or R (or data analysis tool)"],
-    terminal: +d["Terminal (Bash/Zsh)"],
-    github: +d["Git / Github"],
-    html_css: +d["HTML / CSS"],
-    javascript: +d["Javascript"],
-    d3: +d["d3.js"],
-  };
-}).then(data => {
+// reference for d3.autotype: https://github.com/d3/d3-dsv#autoType
+d3.csv("../../data/squirrelActivities.csv", d3.autoType).then(data => {
   console.log(data);
+
   /** CONSTANTS */
+  // constants help us reference the same values throughout our code
   const width = window.innerWidth * 0.9,
     height = window.innerHeight / 3,
     paddingInner = 0.2,
-    margin = { top: 20, bottom: 20, left: 50, right: 50 },
-    duration = 1000,
-    delay = 20;
+    margin = { top: 20, bottom: 40, left: 40, right: 40 };
 
   /** SCALES */
+  // reference for d3.scales: https://github.com/d3/d3-scale
   const xScale = d3
     .scaleBand()
-    .domain(d3.range(data.length))
+    .domain(data.map(d => d.activity))
     .range([margin.left, width - margin.right])
     .paddingInner(paddingInner);
 
   const yScale = d3
     .scaleLinear()
-    .domain([0, d3.max(data, d => d.d3)])
+    .domain([0, d3.max(data, d => d.count)])
     .range([height - margin.bottom, margin.top]);
 
-  const yAxis = d3.axisLeft(yScale).ticks(5);
+  // reference for d3.axis: https://github.com/d3/d3-axis
+  const xAxis = d3.axisBottom(xScale).ticks(data.length);
 
   /** MAIN CODE */
   const svg = d3
@@ -41,45 +33,31 @@ d3.csv("../../data/surveyResults.csv", d => {
     .attr("width", width)
     .attr("height", height);
 
-  // main group
-  const group = svg
-    .selectAll("g")
+  // append rects
+  const rect = svg
+    .selectAll("rect")
     .data(data)
-    .join("g")
-    .attr(
-      "transform",
-      (d, i) => `translate(${xScale(i)}, ${height - margin.bottom})`
-    );
-
-  // rects
-  const rects = group
-    .append("rect")
+    .join("rect")
+    .attr("y", d => yScale(d.count))
+    .attr("x", d => xScale(d.activity))
     .attr("width", xScale.bandwidth())
-    .attr("height", 0);
+    .attr("height", d => height - margin.bottom - yScale(d.count));
 
-  // text
-  group
-    .append("text")
-    .attr("class", "hover-text")
-    .attr("dy", "1.25em")
-    .attr("x", xScale.bandwidth() / 2)
-    .text(d => d.d3);
+  // append text
+  const text = svg
+    .selectAll("text")
+    .data(data)
+    .join("text")
+    .attr("class", "label")
+    // this allows us to position the text in the center of the bar
+    .attr("x", d => xScale(d.activity) + (xScale.bandwidth() / 2))
+    .attr("y", d => yScale(d.count))
+    .text(d => d.count)
+    .attr("dy", "1.25em");
 
   svg
     .append("g")
-    .attr("transform", `translate(${margin.left - 5}, 0)`)
-    .call(yAxis);
-
-  // transitions
-  group
-    .transition()
-    .delay((d, i) => delay * i)
-    .duration(duration)
-    .attr("transform", (d, i) => `translate(${xScale(i)}, ${yScale(d.d3)})`);
-
-  rects
-    .transition()
-    .delay((d, i) => delay * i)
-    .duration(duration)
-    .attr("height", d => height - margin.bottom - yScale(d.d3));
+    .attr("class", "axis")
+    .attr("transform", `translate(0, ${height - margin.bottom})`)
+    .call(xAxis);
 });
