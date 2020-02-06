@@ -56,6 +56,7 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then(data => {
 
   svg
     .append("g")
+    .attr("class", "axis")
     .attr("transform", `translate(0, ${height - margin.bottom})`)
     .call(xAxis);
 });
