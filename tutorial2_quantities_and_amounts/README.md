@@ -3,10 +3,10 @@
 The goals for this tutorial are:
 
 - continuing to get comfortable with the [Github workflow](../GIT_SETUP.md), and with using your [local development environment](../README.md).
-- to introduce [HTML svg](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) coordinate system 
-- to learn how [d3-scales](https://github.com/d3/d3-scale) can place graphical primitives on the page
-- to add axes to an svg using [d3-axis](https://github.com/d3/d3-axis)
-- to learn the tools to make your own bar chart
+- to introduce [HTML svg](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) coordinate system. 
+- to learn how [d3-scales](https://github.com/d3/d3-scale) can map abstract data elements to visual variables.
+- to add axes to an svg using [d3-axis](https://github.com/d3/d3-axis).
+- to learn the tools to make your own bar chart.
 
 ## How to setup, serve, and deploy:
 
@@ -36,13 +36,15 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 ## Week 2 Assignment:
 
-- [ ] Implement your own bar chart in the files present in the root of this directory  (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js)). You may use the existing dataset, or a new one.
-- [ ] Add a [color scale](https://github.com/d3/d3-scale-chromatic) to your bar chart. 
-- [ ] Post your [deployed](#Deploy) link to the appropriate post on the Commons.
+- [ ] Implement your own version of the vertical bar chart we did in class using the files present in the root of this directory (`tutorial1_intro/` [index.html](index.html), [style.css](style.css), [main.js](main.js)), just like we did in Tutorial 1. You may use the existing dataset, or a new one.
+
+- [ ] Turn this **vertical bar chart** into a **horizontal bar chart**. This will require adjusting both scales to consider how the data should map back to the svg coordinate plane. (_Tip_: start by getting your bars to show, even if they are not yet positioned/sized correctly -- sometimes it is easier to understand where something should go by seeing where it currently is).
+
+- [ ] Post your [deployed](#Deploy) link to the Tutorial 2 post on the Commons.
 
 **BONUS:**
 
-- [ ] Turn this **vertical bar chart** into a **horizontal bar chart**.
+- [ ] Add a [color scale](https://github.com/d3/d3-scale-chromatic) to your bar chart. This is another type of scale where your range is going to be color values instead of screen dimensions. Feel free to use `ordinal` or `sequential` colorscales (this will depend on what type of field you want to map to color).
 
 ### Deploy
 
@@ -59,3 +61,5 @@ To receive full credit, you must post your stable path before the start of the n
 [How to use github](https://git-scm.com/book/en/v2)
 
 [Guide to CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+
+[d3 scales](https://github.com/d3/d3-scale)
