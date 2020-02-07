@@ -41,7 +41,8 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then(data => {
     .attr("y", d => yScale(d.count))
     .attr("x", d => xScale(d.activity))
     .attr("width", xScale.bandwidth())
-    .attr("height", d => height - margin.bottom - yScale(d.count));
+    .attr("height", d => height - margin.bottom - yScale(d.count))
+    .attr("fill", "steelblue")
 
   // append text
   const text = svg
