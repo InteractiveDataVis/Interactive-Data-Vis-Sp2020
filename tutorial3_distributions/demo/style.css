@@ -3,3 +3,24 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   padding: 1em 3em;
 }
+
+.dot {
+  cursor: pointer;
+}
+
+.dot .hover-label {
+  opacity: 0;
+  pointer-events: none;
+  /* `text-anchor` sets where the text sits relative to it's positioning */
+  text-anchor: middle;
+}
+
+/* HOVER INTERACTIONS BELOW */
+/* when user hovers over group, make labels visible */
+.dot:hover .hover-label {
+  opacity: 1;
+}
+
+.dot:hover {
+  fill: orange;
+}
