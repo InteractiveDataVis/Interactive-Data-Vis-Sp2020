@@ -4,13 +4,13 @@ const constants = {
   height: window.innerHeight * 0.7,
   margin: { top: 20, bottom: 40, left: 40, right: 40 },
   radius: 3,
-}
+};
 
 // APPLICATION STATE
 let state = {
   data: [],
-  selectedParty: "D"
-}
+  selectedParty: "D",
+};
 
 // GLOBALS
 // these variables allow us to access anything we manipulate in init() but need access to in draw(). All these variables are empty before we assign something to it.
@@ -57,7 +57,7 @@ function init() {
   // add in dropdown values from the unique options in the data
   selectElement
     .selectAll("option")
-    .data(["D", "R", "Both"])
+    .data(["D", "R", "Both"]) // unique data values-- (hint: to do this programmatically take a look `Sets`)
     .join("option")
     .attr("value", d => d)
     .text(d => d);
@@ -73,7 +73,10 @@ function init() {
   svg
     .append("g")
     .attr("class", "x-axis")
-    .attr("transform", `translate(0,${constants.height - constants.margin.bottom})`)
+    .attr(
+      "transform",
+      `translate(0,${constants.height - constants.margin.bottom})`
+    )
     .call(xAxis);
 
   // add the xAxis
@@ -93,39 +96,45 @@ function draw() {
   // filter the data for the selectedParty
   let filteredData = state.data;
   // if there is a selectedParty, filter the data before drawing it
-  if (state.selectedParty) {
-    filteredData = state.data.filter(d => 
-      state.selectedParty === "Both" 
-    || d.party === state.selectedParty);
-    console.log("new filtered data includes", filteredData.length, "politicians");
+  if (state.selectedParty !== "Both") {
+    filteredData = state.data.filter(d => d.party === state.selectedParty);
   }
 
   const dot = svg
     .selectAll(".dot")
     .data(filteredData, d => d.name)
     .join(
-      enter => enter.append("circle")
-        .attr("class", "dot")
-        .attr("cx", d => xScale(d.ideology_rating))
-        .attr("cy", d => yScale(d.environmental_rating))
-        .attr("r", constants.radius)
-        .attr("stroke", "lightgrey")
-        .attr("fill", "green")
-        .call(enter => enter.transition()
-          .transition()
-          .duration(500)
-          .attr("fill", "blue")),
-      update => update
-        .attr("fill", "orange")
-        .call(update => update.transition()
-          .transition()
-          .duration(500)
-          .attr("fill", "blue")),
-      exit => exit
-        .attr("fill", "red")
-        .call(exit => exit.transition()
-          .duration(100)
-          .delay(d => 500 * d.ideology_rating)
-          .remove())
-    )
+      enter =>
+        enter
+          .append("circle")
+          .attr("class", "dot")
+          .attr("cx", d => xScale(d.ideology_rating))
+          .attr("cy", d => yScale(d.environmental_rating))
+          .attr("r", constants.radius)
+          .attr("stroke", "lightgrey")
+          .attr("fill", "green")
+          .call(enter =>
+            enter
+              .transition()
+              .transition()
+              .duration(500)
+              .attr("fill", "blue")
+          ),
+      update =>
+        update.attr("fill", "orange").call(update =>
+          update
+            .transition()
+            .transition()
+            .duration(500)
+            .attr("fill", "blue")
+        ),
+      exit =>
+        exit.attr("fill", "red").call(exit =>
+          exit
+            .transition()
+            .duration(100)
+            .delay(d => 500 * d.ideology_rating)
+            .remove()
+        )
+    );
 }
