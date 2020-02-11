@@ -28,7 +28,7 @@ d3.json("../../data/environmentRatings.json", d3.autoType).then(raw_data => {
 // INIT FUNCTION
 function init() {
   // this will be run *once* when the data finishes loading in
-  
+
   /** SCALES */
   xScale = d3
     .scaleLinear()
@@ -110,9 +110,13 @@ function draw() {
         .attr("cy", d => yScale(d.environmental_rating))
         .attr("r", constants.radius)
         .attr("stroke", "lightgrey")
-        .attr("fill", "green"),
+        .attr("fill", "green")
+        .call(enter => enter.transition()
+          .transition()
+          .duration(500)
+          .attr("fill", "blue")),
       update => update
-        .attr("fill", "blue")
+        .attr("fill", "orange")
         .call(update => update.transition()
           .transition()
           .duration(500)
