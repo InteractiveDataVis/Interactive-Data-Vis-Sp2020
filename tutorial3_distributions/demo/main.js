@@ -28,8 +28,8 @@ d3.json("../../data/environmentRatings.json", d3.autoType).then(raw_data => {
 // INIT FUNCTION
 function init() {
   // this will be run *once* when the data finishes loading in
+  
   /** SCALES */
-
   xScale = d3
     .scaleLinear()
     .domain(d3.extent(state.data, d => d.ideology_rating))
@@ -60,7 +60,7 @@ function init() {
     .data(["D", "R", "Both"])
     .join("option")
     .attr("value", d => d)
-    .text(d => d)
+    .text(d => d);
 
   // create an svg element in our main `d3-container` element
   svg = d3
