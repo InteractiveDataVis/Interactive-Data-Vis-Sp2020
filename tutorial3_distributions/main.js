@@ -1,4 +1,6 @@
-// CONSTANTS
+/**
+ * CONSTANTS AND GLOBALS
+ * */
 const constants = {
   width: window.innerWidth * 0.7,
   height: window.innerHeight * 0.7,
@@ -6,21 +8,24 @@ const constants = {
   radius: 3,
 };
 
-// APPLICATION STATE
-let state = {
-  data: [],
-  // + ADD STATE VARIABLE
-};
-
-// GLOBALS
-/**these variables allow us to access anything we manipulate in
+/** these variables allow us to access anything we manipulate in
  * init() but need access to in draw().
- * All these variables are empty before we assign something to it.*/
+ * All these variables are empty before we assign something to them.*/
 let svg;
 let xScale;
 let yScale;
 
-// DATA LOAD
+/**
+ * APPLICATION STATE
+ * */
+let state = {
+  data: [],
+  // + ADD STATE VARIABLE FOR INTERACTION
+};
+
+/**
+ * LOAD DATA
+ * */
 d3.json(YOUR_DATA_PATH, d3.autoType).then(raw_data => {
   // + SET YOUR DATA PATH
   console.log("raw_data", raw_data);
@@ -28,26 +33,28 @@ d3.json(YOUR_DATA_PATH, d3.autoType).then(raw_data => {
   init();
 });
 
-// INIT FUNCTION
+/**
+ * INITIALIZING FUNCTION
+ * this will be run *one time* when the data finishes loading in
+ * */
 function init() {
-  // this will be run *once* when the data finishes loading in
-
-  /** SCALES */
+  // SCALES
   // + xScale =
   // + yScale =
 
-  /** AXES */
+  // AXES
   // + const xAxis =
   // + const yAxis =
 
+  // UI ELEMENT SETUP
   // add dropdown (HTML selection) for interaction
   // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
   const selectElement = d3.select("#dropdown").on("change", function() {
     // `this` === the selectElement
     // 'this.value' holds the dropdown value a user just selected
-    console.log("new value is", this.value);
 
-    // + SET STATE VARIABLE HERE
+    // + SET STATE VARIABLE WITH SELECTED VALUE
+    console.log("new value is", this.value);
     draw(); // re-draw the graph based on this new selection
   });
 
@@ -60,18 +67,19 @@ function init() {
   draw();
 }
 
-// DRAW FUNCTION
+/**
+ * DRAW FUNCTION
+ * we call this everytime there is an update to the data/state
+ * */
 function draw() {
-  // we call this everytime there is an update to the data/state
-
   // + FILTER DATA BASED ON STATE
 
   const dot = svg
     .selectAll("circle")
     .data(filteredData, d => d.name)
     .join(
-      enter => enter, // + CONFIGURE ENTER SELECTION
-      update => update, // + UPDATE SELECTION
-      exit => exit // + EXIT SELECTION
+      enter => enter, // + HANDLE ENTER SELECTION
+      update => update, // + HANDLE UPDATE SELECTION
+      exit => exit // + HANDLE EXIT SELECTION
     );
 }
