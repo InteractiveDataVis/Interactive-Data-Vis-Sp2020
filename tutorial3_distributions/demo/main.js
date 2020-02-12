@@ -1,49 +1,56 @@
-// CONSTANTS
-const constants = {
-  width: window.innerWidth * 0.7,
-  height: window.innerHeight * 0.7,
-  margin: { top: 20, bottom: 40, left: 40, right: 40 },
-  radius: 3,
-};
+/**
+ * CONSTANTS AND GLOBALS
+ * */
+const width = window.innerWidth * 0.7,
+  height = window.innerHeight * 0.7,
+  margin = { top: 20, bottom: 50, left: 60, right: 40 },
+  radius = 5;
 
-// APPLICATION STATE
-let state = {
-  data: [],
-  selectedParty: "D",
-};
-
-// GLOBALS
-// these variables allow us to access anything we manipulate in init() but need access to in draw(). All these variables are empty before we assign something to it.
+/** these variables allow us to access anything we manipulate in
+ * init() but need access to in draw().
+ * All these variables are empty before we assign something to them.*/
 let svg;
 let xScale;
 let yScale;
 
-// DATA LOAD
+/**
+ * APPLICATION STATE
+ * */
+let state = {
+  data: [],
+  selectedParty: "All",
+};
+
+/**
+ * LOAD DATA
+ * */
 d3.json("../../data/environmentRatings.json", d3.autoType).then(raw_data => {
   console.log("raw_data", raw_data);
   state.data = raw_data;
   init();
 });
 
-// INIT FUNCTION
+/**
+ * INITIALIZING FUNCTION
+ * this will be run *one time* when the data finishes loading in
+ * */
 function init() {
-  // this will be run *once* when the data finishes loading in
-
-  /** SCALES */
+  // SCALES
   xScale = d3
     .scaleLinear()
     .domain(d3.extent(state.data, d => d.ideology_rating))
-    .range([constants.margin.left, constants.width - constants.margin.right]);
+    .range([margin.left, width - margin.right]);
 
   yScale = d3
     .scaleLinear()
     .domain(d3.extent(state.data, d => d.environmental_rating))
-    .range([constants.height - constants.margin.bottom, constants.margin.top]);
+    .range([height - margin.bottom, margin.top]);
 
-  /** AXES */
+  // AXES
   const xAxis = d3.axisBottom(xScale);
   const yAxis = d3.axisLeft(yScale);
 
+  // UI ELEMENT SETUP
   // add dropdown (HTML selection) for interaction
   // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
   const selectElement = d3.select("#dropdown").on("change", function() {
@@ -54,10 +61,10 @@ function init() {
     draw(); // re-draw the graph based on this new selection
   });
 
-  // add in dropdown values from the unique options in the data
+  // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data(["D", "R", "Both"]) // unique data values-- (hint: to do this programmatically take a look `Sets`)
+    .data(["All", "D", "R", "I"]) // unique data values-- (hint: to do this programmatically take a look `Sets`)
     .join("option")
     .attr("value", d => d)
     .text(d => d);
@@ -66,74 +73,94 @@ function init() {
   svg = d3
     .select("#d3-container")
     .append("svg")
-    .attr("width", constants.width)
-    .attr("height", constants.height);
+    .attr("width", width)
+    .attr("height", height);
 
   // add the xAxis
   svg
     .append("g")
-    .attr("class", "x-axis")
-    .attr(
-      "transform",
-      `translate(0,${constants.height - constants.margin.bottom})`
-    )
-    .call(xAxis);
+    .attr("class", "axis x-axis")
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(xAxis)
+    .append("text")
+    .attr("class", "axis-label")
+    .attr("x", "50%")
+    .attr("dy", "3em")
+    .text("Ideology Rating");
 
-  // add the xAxis
+  // add the yAxis
   svg
     .append("g")
-    .attr("class", "y-axis")
-    .attr("transform", `translate(${constants.margin.left},0)`)
-    .call(yAxis);
+    .attr("class", "axis y-axis")
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(yAxis)
+    .append("text")
+    .attr("class", "axis-label")
+    .attr("y", "50%")
+    .attr("dx", "-3em")
+    .attr("writing-mode", "vertical-rl")
+    .text("Environmental Rating");
 
-  draw();
+  draw(); // calls the draw function
 }
 
-// DRAW FUNCTION
+/**
+ * DRAW FUNCTION
+ * we call this everytime there is an update to the data/state
+ * */
 function draw() {
-  // we call this everytime there is an update to the data/state
-
   // filter the data for the selectedParty
   let filteredData = state.data;
-  // if there is a selectedParty, filter the data before drawing it
-  if (state.selectedParty !== "Both") {
+  // if there is a selectedParty, filter the data before mapping it to our elements
+  if (state.selectedParty !== "All") {
     filteredData = state.data.filter(d => d.party === state.selectedParty);
   }
 
   const dot = svg
     .selectAll(".dot")
-    .data(filteredData, d => d.name)
+    .data(filteredData, d => d.name) // use `d.name` as the `key` to match between HTML and data elements
     .join(
       enter =>
+        // enter selections -- all data elements that don't have a `.dot` element attached to them yet
         enter
           .append("circle")
-          .attr("class", "dot")
-          .attr("cx", d => xScale(d.ideology_rating))
-          .attr("cy", d => yScale(d.environmental_rating))
-          .attr("r", constants.radius)
+          .attr("class", "dot") // Note: this is important so we can identify it in future updates
           .attr("stroke", "lightgrey")
-          .attr("fill", "green")
+          .attr("opacity", 0.5)
+          .attr("fill", d => {
+            if (d.party === "D") return "blue";
+            else if (d.party === "R") return "red";
+            else return "purple";
+          })
+          .attr("r", radius)
+          .attr("cy", d => yScale(d.environmental_rating))
+          .attr("cx", d => margin.left) // initial value - to be transitioned
           .call(enter =>
             enter
-              .transition()
-              .transition()
-              .duration(500)
-              .attr("fill", "blue")
+              .transition() // initialize transition
+              .delay(d => 500 * d.ideology_rating) // delay on each element
+              .duration(500) // duration 500ms
+              .attr("cx", d => xScale(d.ideology_rating))
           ),
       update =>
-        update.attr("fill", "orange").call(update =>
+        update.call(update =>
+          // update selections -- all data elements that match with a `.dot` element
           update
             .transition()
+            .duration(250)
+            .attr("stroke", "black")
             .transition()
-            .duration(500)
-            .attr("fill", "blue")
+            .duration(250)
+            .attr("stroke", "lightgrey")
         ),
       exit =>
-        exit.attr("fill", "red").call(exit =>
+        exit.call(exit =>
+          // exit selections -- all the `.dot` element that no longer match to HTML elements
           exit
             .transition()
-            .duration(100)
-            .delay(d => 500 * d.ideology_rating)
+            .delay(d => 50 * d.ideology_rating)
+            .duration(500)
+            .attr("cx", width)
             .remove()
         )
     );
