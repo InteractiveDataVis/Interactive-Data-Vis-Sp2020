@@ -1,0 +1,4274 @@
+[
+    {
+      "name": "Whitehouse, Sheldon",
+      "state": "RI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.18029928127453942
+    },
+    {
+      "name": "Ernst, Joni",
+      "state": "IA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9332695727307143
+    },
+    {
+      "name": "Gardner, Cory",
+      "state": "CO",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7768840267553742
+    },
+    {
+      "name": "Gillibrand, Kirsten E.",
+      "state": "NY",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.26937263467710354
+    },
+    {
+      "name": "Rubio, Marco",
+      "state": "FL",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.847652118881885
+    },
+    {
+      "name": "Graham, Lindsey O.",
+      "state": "SC",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8641820753201587
+    },
+    {
+      "name": "Grassley, Chuck E.",
+      "state": "IA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9332695727307143
+    },
+    {
+      "name": "Wyden, Ron",
+      "state": "OR",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.16526645037083393
+    },
+    {
+      "name": "Young, Todd",
+      "state": "IN",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7807691104289503
+    },
+    {
+      "name": "Hatch, Orrin G.",
+      "state": "UT",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8853832673403488
+    },
+    {
+      "name": "Heinrich, Martin T.",
+      "state": "NM",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 93,
+      "ideology_rating": 0.32272956125693947
+    },
+    {
+      "name": "Heller, Dean",
+      "state": "NV",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7990862292032658
+    },
+    {
+      "name": "Roberts, Pat",
+      "state": "KS",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9508044649731177
+    },
+    {
+      "name": "Hirono, Mazie K.",
+      "state": "HI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23802963131120744
+    },
+    {
+      "name": "Risch, Jim",
+      "state": "ID",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9126523163147815
+    },
+    {
+      "name": "Perdue, David",
+      "state": "GA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9534992499898247
+    },
+    {
+      "name": "Rounds, Mike",
+      "state": "SD",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9698474898734152
+    },
+    {
+      "name": "Flake, Jeff",
+      "state": "AZ",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8187104401658056
+    },
+    {
+      "name": "Wicker, Roger F.",
+      "state": "MS",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8967812019941833
+    },
+    {
+      "name": "Cortez Masto, Catherine",
+      "state": "NV",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.7990862292032658
+    },
+    {
+      "name": "Hassan, Margaret Wood",
+      "state": "NH",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.3179214550681262
+    },
+    {
+      "name": "Kennedy, John Neely",
+      "state": "LA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.868355640246332
+    },
+    {
+      "name": "Harris, Kamala",
+      "state": "CA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.16155261267002077
+    },
+    {
+      "name": "Donnelly, Joe",
+      "state": "IN",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 71,
+      "ideology_rating": 0.7807691104289503
+    },
+    {
+      "name": "Hoeven, John",
+      "state": "ND",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8403556102836912
+    },
+    {
+      "name": "Sanders, Bernie",
+      "state": "VT",
+      "district": "",
+      "party": "I",
+      "environmental_rating": 100,
+      "ideology_rating": 0.21960711365844904
+    },
+    {
+      "name": "Durbin, Dick",
+      "state": "IL",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.1940172195938445
+    },
+    {
+      "name": "Tillis, Thom",
+      "state": "NC",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8762724448655931
+    },
+    {
+      "name": "Enzi, Michael B.",
+      "state": "WY",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9753306842241066
+    },
+    {
+      "name": "Sullivan, Dan",
+      "state": "AK",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7639358579781476
+    },
+    {
+      "name": "Sasse, Benjamin Eric",
+      "state": "NE",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.8942829609668851
+    },
+    {
+      "name": "Feinstein, Dianne",
+      "state": "CA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 93,
+      "ideology_rating": 0.16155261267002077
+    },
+    {
+      "name": "Inhofe, James M.",
+      "state": "OK",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 1
+    },
+    {
+      "name": "Reed, Jack",
+      "state": "RI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.18029928127453942
+    },
+    {
+      "name": "King, Angus",
+      "state": "ME",
+      "district": "",
+      "party": "I",
+      "environmental_rating": 93,
+      "ideology_rating": 0.5363965727712479
+    },
+    {
+      "name": "Markey, Ed",
+      "state": "MA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.15393746268225655
+    },
+    {
+      "name": "McCaskill, Claire",
+      "state": "MO",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 79,
+      "ideology_rating": 0.9174879938360249
+    },
+    {
+      "name": "Daines, Steve",
+      "state": "MT",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.9195216823248556
+    },
+    {
+      "name": "McConnell, Mitch",
+      "state": "KY",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7653849728633025
+    },
+    {
+      "name": "Heitkamp, Heidi",
+      "state": "ND",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 50,
+      "ideology_rating": 0.8403556102836912
+    },
+    {
+      "name": "Fischer, Deb",
+      "state": "NE",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8942829609668851
+    },
+    {
+      "name": "Menendez, Robert",
+      "state": "NJ",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23466051022537585
+    },
+    {
+      "name": "Merkley, Jeff",
+      "state": "OR",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.16526645037083393
+    },
+    {
+      "name": "Nelson, Bill",
+      "state": "FL",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 71,
+      "ideology_rating": 0.847652118881885
+    },
+    {
+      "name": "Moran, Jerry",
+      "state": "KS",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.9508044649731177
+    },
+    {
+      "name": "Murkowski, Lisa A.",
+      "state": "AK",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7639358579781476
+    },
+    {
+      "name": "Murphy, Chris S.",
+      "state": "CT",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.19018801969606847
+    },
+    {
+      "name": "Stabenow, Debbie",
+      "state": "MI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.4387098804841697
+    },
+    {
+      "name": "Manchin III, Joe",
+      "state": "WV",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 43,
+      "ideology_rating": 0.7576891768003867
+    },
+    {
+      "name": "Warren, Elizabeth",
+      "state": "MA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.15393746268225655
+    },
+    {
+      "name": "Schatz, Brian Emanuel",
+      "state": "HI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23802963131120744
+    },
+    {
+      "name": "Portman, Rob",
+      "state": "OH",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.6546625932396029
+    },
+    {
+      "name": "Booker, Cory Anthony",
+      "state": "NJ",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23466051022537585
+    },
+    {
+      "name": "Kaine, Timothy",
+      "state": "VA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.463649480284227
+    },
+    {
+      "name": "Klobuchar, Amy",
+      "state": "MN",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.31509415347512476
+    },
+    {
+      "name": "Kyl, Jon",
+      "state": "AZ",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8187104401658056
+    },
+    {
+      "name": "Cotton, Tom",
+      "state": "AR",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9727381492026903
+    },
+    {
+      "name": "Lankford, James",
+      "state": "OK",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 1
+    },
+    {
+      "name": "Leahy, Patrick J.",
+      "state": "VT",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.21960711365844904
+    },
+    {
+      "name": "Lee, Mike",
+      "state": "UT",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8853832673403488
+    },
+    {
+      "name": "Peters, Gary C.",
+      "state": "MI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.4387098804841697
+    },
+    {
+      "name": "Cruz, Ted",
+      "state": "TX",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.9624988256180129
+    },
+    {
+      "name": "Duckworth, Tammy",
+      "state": "IL",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.1940172195938445
+    },
+    {
+      "name": "Paul, Rand",
+      "state": "KY",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7653849728633025
+    },
+    {
+      "name": "Murray, Patty",
+      "state": "WA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.2904001003545551
+    },
+    {
+      "name": "Cardin, Benjamin L.",
+      "state": "MD",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23492253773670702
+    },
+    {
+      "name": "Brown, Sherrod C.",
+      "state": "OH",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.6546625932396029
+    },
+    {
+      "name": "Thune, John R.",
+      "state": "SD",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.9698474898734152
+    },
+    {
+      "name": "Cassidy, Bill",
+      "state": "LA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.868355640246332
+    },
+    {
+      "name": "Bennet, Michael",
+      "state": "CO",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.7768840267553742
+    },
+    {
+      "name": "Blunt, Roy",
+      "state": "MO",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9174879938360249
+    },
+    {
+      "name": "Cochran, Thad",
+      "state": "MS",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8967812019941833
+    },
+    {
+      "name": "Van Hollen, Chris",
+      "state": "MD",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.23492253773670702
+    },
+    {
+      "name": "Blumenthal, Richard",
+      "state": "CT",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.19018801969606847
+    },
+    {
+      "name": "Jones, Doug",
+      "state": "AL",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 79,
+      "ideology_rating": 0.675828831327996
+    },
+    {
+      "name": "Scott, Tim",
+      "state": "SC",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.8641820753201587
+    },
+    {
+      "name": "Udall, Tom S.",
+      "state": "NM",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.32272956125693947
+    },
+    {
+      "name": "Johnson, Ron",
+      "state": "WI",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8434803336255454
+    },
+    {
+      "name": "Shaheen, Jeanne",
+      "state": "NH",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 93,
+      "ideology_rating": 0.3179214550681262
+    },
+    {
+      "name": "Casey, Bob",
+      "state": "PA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 93,
+      "ideology_rating": 0.7414179659117345
+    },
+    {
+      "name": "Toomey, Pat",
+      "state": "PA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7414179659117345
+    },
+    {
+      "name": "Capito, Shelley Moore",
+      "state": "WV",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.7576891768003867
+    },
+    {
+      "name": "Cantwell, Maria",
+      "state": "WA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.2904001003545551
+    },
+    {
+      "name": "Shelby, Richard C.",
+      "state": "AL",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.675828831327996
+    },
+    {
+      "name": "Carper, Tom",
+      "state": "DE",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.42418475658542654
+    },
+    {
+      "name": "Burr, Richard M.",
+      "state": "NC",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.8762724448655931
+    },
+    {
+      "name": "Boozman, John N.",
+      "state": "AR",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9727381492026903
+    },
+    {
+      "name": "Collins, Susan M.",
+      "state": "ME",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 21,
+      "ideology_rating": 0.5363965727712479
+    },
+    {
+      "name": "Hyde-Smith, Cindy",
+      "state": "MS",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 8,
+      "ideology_rating": 0.8967812019941833
+    },
+    {
+      "name": "Crapo, Michael D.",
+      "state": "ID",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9126523163147815
+    },
+    {
+      "name": "Warner, Mark R.",
+      "state": "VA",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.463649480284227
+    },
+    {
+      "name": "Schumer, Chuck",
+      "state": "NY",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.26937263467710354
+    },
+    {
+      "name": "Cornyn, John",
+      "state": "TX",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9624988256180129
+    },
+    {
+      "name": "Tester, Jon",
+      "state": "MT",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 93,
+      "ideology_rating": 0.9195216823248556
+    },
+    {
+      "name": "Alexander, Lamar",
+      "state": "TN",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.716237337783082
+    },
+    {
+      "name": "Isakson, Johnny H.",
+      "state": "GA",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9534992499898247
+    },
+    {
+      "name": "Barrasso, John",
+      "state": "WY",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.9753306842241066
+    },
+    {
+      "name": "Coons, Chris",
+      "state": "DE",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.42418475658542654
+    },
+    {
+      "name": "Smith, Tina",
+      "state": "MN",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.31509415347512476
+    },
+    {
+      "name": "Corker, Bob",
+      "state": "TN",
+      "district": "",
+      "party": "R",
+      "environmental_rating": 7,
+      "ideology_rating": 0.716237337783082
+    },
+    {
+      "name": "Baldwin, Tammy",
+      "state": "WI",
+      "district": "",
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.8434803336255454
+    },
+    {
+      "name": "Welch, Peter F.",
+      "state": "VT",
+      "district": 0,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.30406827030085437
+    },
+    {
+      "name": "Young, Don",
+      "state": "AK",
+      "district": 0,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6999394438368088
+    },
+    {
+      "name": "Cheney, Liz",
+      "state": "WY",
+      "district": 0,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6825253315467171
+    },
+    {
+      "name": "Noem, Kristi",
+      "state": "SD",
+      "district": 0,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7994036719851122
+    },
+    {
+      "name": "Cramer, Kevin",
+      "state": "ND",
+      "district": 0,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9707086445345953
+    },
+    {
+      "name": "Blunt Rochester, Lisa",
+      "state": "DE",
+      "district": 0,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.28750547777173224
+    },
+    {
+      "name": "Gianforte, Greg",
+      "state": "MT",
+      "district": 0,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7421342728205266
+    },
+    {
+      "name": "Hern, Kevin",
+      "state": "OK",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.46344905940978515
+    },
+    {
+      "name": "O'Halleran, Tom",
+      "state": "AZ",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.490073317623138
+    },
+    {
+      "name": "Blum, Rod",
+      "state": "IA",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7194678909584877
+    },
+    {
+      "name": "Titus, Dina",
+      "state": "NV",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.29599090642697795
+    },
+    {
+      "name": "Carter, Buddy",
+      "state": "GA",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8456619902883155
+    },
+    {
+      "name": "Bishop, Rob",
+      "state": "UT",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7436897966205708
+    },
+    {
+      "name": "Bonamici, Suzanne",
+      "state": "OR",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.23954168482430427
+    },
+    {
+      "name": "Norcross, Donald W.",
+      "state": "NJ",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.3446965157461198
+    },
+    {
+      "name": "DelBene, Suzan K.",
+      "state": "WA",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3567180863222403
+    },
+    {
+      "name": "Labrador, Raul",
+      "state": "ID",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6732160080661004
+    },
+    {
+      "name": "LaMalfa, Doug",
+      "state": "CA",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9457999804491054
+    },
+    {
+      "name": "Shea-Porter, Carol",
+      "state": "NH",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.2528853891200173
+    },
+    {
+      "name": "Byrne, Bradley",
+      "state": "AL",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8690607378721659
+    },
+    {
+      "name": "Butterfield, G.K.",
+      "state": "NC",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3207803328740702
+    },
+    {
+      "name": "Brady, Robert A.",
+      "state": "PA",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.3914972508507549
+    },
+    {
+      "name": "Larson, John B.",
+      "state": "CT",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3927612468265972
+    },
+    {
+      "name": "Neal, Richard E.",
+      "state": "MA",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.40005592894164915
+    },
+    {
+      "name": "McKinley, David",
+      "state": "WV",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.768326965910473
+    },
+    {
+      "name": "Pingree, Chellie M.",
+      "state": "ME",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2770819730045363
+    },
+    {
+      "name": "Bergman, Jack",
+      "state": "MI",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7094041103913421
+    },
+    {
+      "name": "Comer, James",
+      "state": "KY",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7007034972615607
+    },
+    {
+      "name": "Kelly, Trent",
+      "state": "MS",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7730305518790359
+    },
+    {
+      "name": "Crawford, Rick",
+      "state": "AR",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7579434630912273
+    },
+    {
+      "name": "Marshall, Roger",
+      "state": "KS",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8765783568681116
+    },
+    {
+      "name": "Cicilline, David",
+      "state": "RI",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.22475229432655375
+    },
+    {
+      "name": "Visclosky, Peter J.",
+      "state": "IN",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.4178130939718298
+    },
+    {
+      "name": "Zeldin, Lee",
+      "state": "NY",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7574673975643641
+    },
+    {
+      "name": "Clay, William Lacy",
+      "state": "MO",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.31671038156360637
+    },
+    {
+      "name": "Fortenberry, Jeff",
+      "state": "NE",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.722577777098881
+    },
+    {
+      "name": "Rush, Bobby L.",
+      "state": "IL",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.29990946060589013
+    },
+    {
+      "name": "Gohmert, Louie",
+      "state": "TX",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9187969285104421
+    },
+    {
+      "name": "Wittman, Rob",
+      "state": "VA",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7945854812281279
+    },
+    {
+      "name": "Chabot, Steve",
+      "state": "OH",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.866871743654627
+    },
+    {
+      "name": "Hanabusa, Colleen",
+      "state": "HI",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 46,
+      "ideology_rating": 0.279513057439388
+    },
+    {
+      "name": "Scalise, Steve",
+      "state": "LA",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6161452087308867
+    },
+    {
+      "name": "Roe, Phil",
+      "state": "TN",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9372360438187445
+    },
+    {
+      "name": "DeGette, Diana L.",
+      "state": "CO",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3132683688312817
+    },
+    {
+      "name": "Gaetz, Matt",
+      "state": "FL",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.8630219637546659
+    },
+    {
+      "name": "Sanford, Mark",
+      "state": "SC",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 40,
+      "ideology_rating": 0.6403011417155928
+    },
+    {
+      "name": "Harris, Andy",
+      "state": "MD",
+      "district": 1,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.850120141740325
+    },
+    {
+      "name": "Walz, Tim",
+      "state": "MN",
+      "district": 1,
+      "party": "D",
+      "environmental_rating": 14,
+      "ideology_rating": 0.4559314364821782
+    },
+    {
+      "name": "Mullin, Markwayne",
+      "state": "OK",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.767323249523052
+    },
+    {
+      "name": "Wenstrup, Brad R.",
+      "state": "OH",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7716559389042275
+    },
+    {
+      "name": "Pearce, Steve",
+      "state": "NM",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8521017710950988
+    },
+    {
+      "name": "Larsen, Rick",
+      "state": "WA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.2852813930758417
+    },
+    {
+      "name": "Dunn, Neal",
+      "state": "FL",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8178909404534387
+    },
+    {
+      "name": "Amodei, Mark E.",
+      "state": "NV",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7236993263637358
+    },
+    {
+      "name": "Thompson, Bennie G.",
+      "state": "MS",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.31013340742097434
+    },
+    {
+      "name": "Duncan, Jr., John J.",
+      "state": "TN",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7436248781533729
+    },
+    {
+      "name": "Holding, George",
+      "state": "NC",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7472045810047417
+    },
+    {
+      "name": "McGovern, Jim",
+      "state": "MA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.13643475970984376
+    },
+    {
+      "name": "Courtney, Joe",
+      "state": "CT",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3884941034703397
+    },
+    {
+      "name": "Walorski, Jackie",
+      "state": "IN",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.829031327044692
+    },
+    {
+      "name": "Wagner, Ann",
+      "state": "MO",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8340240100801843
+    },
+    {
+      "name": "Kuster, Ann M.",
+      "state": "NH",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.4293736355526366
+    },
+    {
+      "name": "Bishop, Sanford D.",
+      "state": "GA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 63,
+      "ideology_rating": 0.45138315223934555
+    },
+    {
+      "name": "Wilson, Joe",
+      "state": "SC",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8321585182298161
+    },
+    {
+      "name": "Walden, Greg P.",
+      "state": "OR",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6407339591301899
+    },
+    {
+      "name": "Simpson, Mike",
+      "state": "ID",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.6193680590936247
+    },
+    {
+      "name": "Gabbard, Tulsi",
+      "state": "HI",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3382445297565082
+    },
+    {
+      "name": "Mooney, Alex",
+      "state": "WV",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8802398965902584
+    },
+    {
+      "name": "King, Peter T.",
+      "state": "NY",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 29,
+      "ideology_rating": 0.6606543370282332
+    },
+    {
+      "name": "Poe, Ted",
+      "state": "TX",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8000682203808588
+    },
+    {
+      "name": "Polis, Jared",
+      "state": "CO",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 66,
+      "ideology_rating": 0.3471575406749793
+    },
+    {
+      "name": "Pocan, Mark",
+      "state": "WI",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.1859815732462897
+    },
+    {
+      "name": "Taylor, Scott",
+      "state": "VA",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.6020364159864601
+    },
+    {
+      "name": "Guthrie, Brett",
+      "state": "KY",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8021191616936905
+    },
+    {
+      "name": "Jenkins, Lynn M.",
+      "state": "KS",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8173900662604683
+    },
+    {
+      "name": "McSally, Martha",
+      "state": "AZ",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7190961204558299
+    },
+    {
+      "name": "Roby, Martha",
+      "state": "AL",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6769867480301616
+    },
+    {
+      "name": "Evans, Dwight",
+      "state": "PA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.17346178482698776
+    },
+    {
+      "name": "Hill, French",
+      "state": "AR",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.766974358534176
+    },
+    {
+      "name": "Richmond, Cedric L",
+      "state": "LA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 46,
+      "ideology_rating": 0.3140279805966698
+    },
+    {
+      "name": "Poliquin, Bruce",
+      "state": "ME",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7715078243363717
+    },
+    {
+      "name": "Huizenga, Bill",
+      "state": "MI",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8064713827383335
+    },
+    {
+      "name": "Loebsack, Dave W.",
+      "state": "IA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.463007769784148
+    },
+    {
+      "name": "LoBiondo, Frank A.",
+      "state": "NJ",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 51,
+      "ideology_rating": 0.610015307897227
+    },
+    {
+      "name": "Lewis, Jason",
+      "state": "MN",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6526243349551789
+    },
+    {
+      "name": "Stewart, Chris",
+      "state": "UT",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.791410496701254
+    },
+    {
+      "name": "Huffman, Jared",
+      "state": "CA",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.18034585201504003
+    },
+    {
+      "name": "Ruppersberger, C.A. Dutch",
+      "state": "MD",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.4538792345810471
+    },
+    {
+      "name": "Bacon, Don",
+      "state": "NE",
+      "district": 2,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8167746729519856
+    },
+    {
+      "name": "Langevin, Jim",
+      "state": "RI",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.276983355314815
+    },
+    {
+      "name": "Kelly, Robin",
+      "state": "IL",
+      "district": 2,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.2803477780848422
+    },
+    {
+      "name": "Tipton, Scott",
+      "state": "CO",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.8373760927828597
+    },
+    {
+      "name": "Beatty, Joyce",
+      "state": "OH",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.3534547824600401
+    },
+    {
+      "name": "Yoder, Kevin",
+      "state": "KS",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7302824873838253
+    },
+    {
+      "name": "Paulsen, Erik",
+      "state": "MN",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 34,
+      "ideology_rating": 0.7130492078028503
+    },
+    {
+      "name": "Yarmuth, John",
+      "state": "KY",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.30359329440308486
+    },
+    {
+      "name": "Rogers, Mike D.",
+      "state": "AL",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7358381721684796
+    },
+    {
+      "name": "Sarbanes, John P.",
+      "state": "MD",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.30300238629874504
+    },
+    {
+      "name": "Smith, Adrian M.",
+      "state": "NE",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.699309879617638
+    },
+    {
+      "name": "Tsongas, Niki",
+      "state": "MA",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.2742944532968714
+    },
+    {
+      "name": "Womack, Steve",
+      "state": "AR",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7025895781131019
+    },
+    {
+      "name": "Scott, Robert C.",
+      "state": "VA",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.20226307632030371
+    },
+    {
+      "name": "Amash, Justin",
+      "state": "MI",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 37,
+      "ideology_rating": 0.5326364068654876
+    },
+    {
+      "name": "Suozzi, Thomas",
+      "state": "NY",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.42022204262764956
+    },
+    {
+      "name": "MacArthur, Tom",
+      "state": "NJ",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 23,
+      "ideology_rating": 0.6518687009003845
+    },
+    {
+      "name": "Herrera-Beutler, Jaime",
+      "state": "WA",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.6627954962037675
+    },
+    {
+      "name": "Harper, Gregg",
+      "state": "MS",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8083352165941662
+    },
+    {
+      "name": "Grijalva, Raul",
+      "state": "AZ",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.05810776859081656
+    },
+    {
+      "name": "Duncan, Jeff",
+      "state": "SC",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.962082307067141
+    },
+    {
+      "name": "Young, David",
+      "state": "IA",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8227915154935207
+    },
+    {
+      "name": "Garamendi, John",
+      "state": "CA",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.28800065010770537
+    },
+    {
+      "name": "Fleischmann, Chuck",
+      "state": "TN",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7581963652734018
+    },
+    {
+      "name": "DeLauro, Rosa L.",
+      "state": "CT",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.21183698323624187
+    },
+    {
+      "name": "Ferguson, A.",
+      "state": "GA",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8135036283105482
+    },
+    {
+      "name": "Banks, Jim",
+      "state": "IN",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.88209653337519
+    },
+    {
+      "name": "Higgins, Clay",
+      "state": "LA",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7593431767511268
+    },
+    {
+      "name": "Rosen, Jacky",
+      "state": "NV",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.40004304220091175
+    },
+    {
+      "name": "Blumenauer, Earl",
+      "state": "OR",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.2249394671207375
+    },
+    {
+      "name": "Curtis, John",
+      "state": "UT",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6590935968790771
+    },
+    {
+      "name": "Johnson, Sam",
+      "state": "TX",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.785344206268727
+    },
+    {
+      "name": "Jones, Jr., Walter",
+      "state": "NC",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.8004030830931801
+    },
+    {
+      "name": "Lucas, Frank D.",
+      "state": "OK",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7074399387033364
+    },
+    {
+      "name": "Luetkemeyer, Blaine",
+      "state": "MO",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8519478570708761
+    },
+    {
+      "name": "Lujan, Ben Ray",
+      "state": "NM",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.34843385726965426
+    },
+    {
+      "name": "Yoho, Ted S.",
+      "state": "FL",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8738977071709476
+    },
+    {
+      "name": "Lipinski, Dan",
+      "state": "IL",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.450033858388774
+    },
+    {
+      "name": "Kind, Ron",
+      "state": "WI",
+      "district": 3,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.5729460298921204
+    },
+    {
+      "name": "Kelly, Mike",
+      "state": "PA",
+      "district": 3,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8254646650312036
+    },
+    {
+      "name": "Brown, Anthony",
+      "state": "MD",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.27337607113024126
+    },
+    {
+      "name": "Smith, Christopher H.",
+      "state": "NJ",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 60,
+      "ideology_rating": 0.6786254514597734
+    },
+    {
+      "name": "McCollum, Betty",
+      "state": "MN",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.18247798591995762
+    },
+    {
+      "name": "Ratcliffe, John",
+      "state": "TX",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8336915691019354
+    },
+    {
+      "name": "DesJarlais, Scott",
+      "state": "TN",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8757982157152921
+    },
+    {
+      "name": "McClintock, Tom",
+      "state": "CA",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7885776256717513
+    },
+    {
+      "name": "Estes, Ron",
+      "state": "KS",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7506855579634911
+    },
+    {
+      "name": "DeFazio, Peter A.",
+      "state": "OR",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.3800927998303865
+    },
+    {
+      "name": "Aderholt, Robert B.",
+      "state": "AL",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7436642095781105
+    },
+    {
+      "name": "Rutherford, John",
+      "state": "FL",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7352001667217104
+    },
+    {
+      "name": "Perry, Scott",
+      "state": "PA",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7883547297334489
+    },
+    {
+      "name": "Kennedy, Joseph P.",
+      "state": "MA",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.31988138514004666
+    },
+    {
+      "name": "McEachin, A. Donald",
+      "state": "VA",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.2742924934174378
+    },
+    {
+      "name": "Johnson, Mike",
+      "state": "LA",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7812349660988467
+    },
+    {
+      "name": "Kihuen, Ruben",
+      "state": "NV",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.3058809926193211
+    },
+    {
+      "name": "Palazzo, Steven",
+      "state": "MS",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8582968987834637
+    },
+    {
+      "name": "Cole, Tom",
+      "state": "OK",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.8445577389255309
+    },
+    {
+      "name": "Westerman, Bruce",
+      "state": "AR",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8406607987311963
+    },
+    {
+      "name": "Hartzler, Vicky",
+      "state": "MO",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8483998255671757
+    },
+    {
+      "name": "Moolenaar, John",
+      "state": "MI",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.776081060117055
+    },
+    {
+      "name": "Himes, Jim",
+      "state": "CT",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3977268964491537
+    },
+    {
+      "name": "Love, Mia",
+      "state": "UT",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 17,
+      "ideology_rating": 0.6984530665296413
+    },
+    {
+      "name": "Buck, Ken",
+      "state": "CO",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7354214022338871
+    },
+    {
+      "name": "Massie, Thomas",
+      "state": "KY",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 17,
+      "ideology_rating": 0.6299079212899442
+    },
+    {
+      "name": "Johnson, Hank",
+      "state": "GA",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.2590318822790589
+    },
+    {
+      "name": "Jordan, Jim",
+      "state": "OH",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7181975193938069
+    },
+    {
+      "name": "Moore, Gwen",
+      "state": "WI",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.11233725148151896
+    },
+    {
+      "name": "Price, David",
+      "state": "NC",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3361481867393019
+    },
+    {
+      "name": "King, Steve A.",
+      "state": "IA",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.9302522266981975
+    },
+    {
+      "name": "Rice, Kathleen",
+      "state": "NY",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.38095926855473455
+    },
+    {
+      "name": "Rokita, Todd",
+      "state": "IN",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9856101307685294
+    },
+    {
+      "name": "Gosar, Paul",
+      "state": "AZ",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.9599181167675667
+    },
+    {
+      "name": "Gutierrez, Luis V.",
+      "state": "IL",
+      "district": 4,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.15186236645269807
+    },
+    {
+      "name": "Gowdy, Trey",
+      "state": "SC",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.613367443406539
+    },
+    {
+      "name": "Newhouse, Dan",
+      "state": "WA",
+      "district": 4,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8216773985055726
+    },
+    {
+      "name": "Thompson, Mike",
+      "state": "CA",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.41162086736179065
+    },
+    {
+      "name": "Thompson, Glenn W.",
+      "state": "PA",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8428880971967424
+    },
+    {
+      "name": "Russell, Steve",
+      "state": "OK",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6826404036430493
+    },
+    {
+      "name": "Scanlon, Mary Gay",
+      "state": "PA",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.8428880971967424
+    },
+    {
+      "name": "Biggs, Andy",
+      "state": "AZ",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.877295335307143
+    },
+    {
+      "name": "Norman, Ralph",
+      "state": "SC",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9536261165205908
+    },
+    {
+      "name": "Brooks, Susan W.",
+      "state": "IN",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7733641162615653
+    },
+    {
+      "name": "Garrett, Thomas",
+      "state": "VA",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.8045344716155436
+    },
+    {
+      "name": "Clark, Katherine M.",
+      "state": "MA",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2072360562329104
+    },
+    {
+      "name": "Kildee, Daniel T.",
+      "state": "MI",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.30592277361752807
+    },
+    {
+      "name": "Esty, Elizabeth H.",
+      "state": "CT",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3659836839693475
+    },
+    {
+      "name": "Lawson, Al",
+      "state": "FL",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.3345092835225539
+    },
+    {
+      "name": "Gottheimer, Josh",
+      "state": "NJ",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 80,
+      "ideology_rating": 0.5611410369358477
+    },
+    {
+      "name": "Cleaver, Emanuel",
+      "state": "MO",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.36162408381156114
+    },
+    {
+      "name": "Hensarling, Jeb",
+      "state": "TX",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7547422702745722
+    },
+    {
+      "name": "Lamborn, Doug",
+      "state": "CO",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8557064826333638
+    },
+    {
+      "name": "Sensenbrenner, James F.",
+      "state": "WI",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7937698957652388
+    },
+    {
+      "name": "Hoyer, Steny H.",
+      "state": "MD",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 63,
+      "ideology_rating": 0.37668812000950447
+    },
+    {
+      "name": "McMorris Rodgers, Cathy",
+      "state": "WA",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7031122001327134
+    },
+    {
+      "name": "Meeks, Gregory W.",
+      "state": "NY",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.2465918921658699
+    },
+    {
+      "name": "Schrader, Kurt",
+      "state": "OR",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 63,
+      "ideology_rating": 0.5194228544582105
+    },
+    {
+      "name": "Cooper, Jim",
+      "state": "TN",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.44184147994787387
+    },
+    {
+      "name": "Rogers, Harold",
+      "state": "KY",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6061905884382693
+    },
+    {
+      "name": "Abraham, Ralph",
+      "state": "LA",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9206537990433182
+    },
+    {
+      "name": "Quigley, Mike",
+      "state": "IL",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.25821535181695643
+    },
+    {
+      "name": "Lewis, John R.",
+      "state": "GA",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.20380140297328964
+    },
+    {
+      "name": "Foxx, Virginia",
+      "state": "NC",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6350646505256955
+    },
+    {
+      "name": "Ellison, Keith M.",
+      "state": "MN",
+      "district": 5,
+      "party": "D",
+      "environmental_rating": 74,
+      "ideology_rating": 0.15173915354062814
+    },
+    {
+      "name": "Brooks, Mo",
+      "state": "AL",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.8157614792971751
+    },
+    {
+      "name": "Latta, Bob",
+      "state": "OH",
+      "district": 5,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8077984953309925
+    },
+    {
+      "name": "Graves, Garret",
+      "state": "LA",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6655768109086597
+    },
+    {
+      "name": "Walker, Bradley Mark",
+      "state": "NC",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7827413355575107
+    },
+    {
+      "name": "Grothman, Glenn",
+      "state": "WI",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9376951199080206
+    },
+    {
+      "name": "Goodlatte, Bob",
+      "state": "VA",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7449177723123053
+    },
+    {
+      "name": "Graves, Sam",
+      "state": "MO",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7233432048618321
+    },
+    {
+      "name": "Roskam, Peter J.",
+      "state": "IL",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.6937857499518171
+    },
+    {
+      "name": "Kilmer, Derek",
+      "state": "WA",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.4240097226454065
+    },
+    {
+      "name": "Pallone, Frank J.",
+      "state": "NJ",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.21901063294840828
+    },
+    {
+      "name": "Barr, Garland",
+      "state": "KY",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8715167117485717
+    },
+    {
+      "name": "Moulton, Seth",
+      "state": "MA",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.34791385516801787
+    },
+    {
+      "name": "Palmer, Gary",
+      "state": "AL",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6820062776789374
+    },
+    {
+      "name": "Emmer, Tom",
+      "state": "MN",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8271272220380277
+    },
+    {
+      "name": "Costello, Ryan",
+      "state": "PA",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 43,
+      "ideology_rating": 0.6510796343420152
+    },
+    {
+      "name": "Coffman, Mike",
+      "state": "CO",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.7929888733820311
+    },
+    {
+      "name": "Handel, Karen",
+      "state": "GA",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6996129513304419
+    },
+    {
+      "name": "Black, Diane",
+      "state": "TN",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7751068201087584
+    },
+    {
+      "name": "Upton, Fred",
+      "state": "MI",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 40,
+      "ideology_rating": 0.6610874651245915
+    },
+    {
+      "name": "Delaney, John K.",
+      "state": "MD",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.47952655126985144
+    },
+    {
+      "name": "Matsui, Doris O.",
+      "state": "CA",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.31320058521270155
+    },
+    {
+      "name": "Johnson, Bill",
+      "state": "OH",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8481236976859217
+    },
+    {
+      "name": "Schweikert, David",
+      "state": "AZ",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7841297911995874
+    },
+    {
+      "name": "Barton, Joe",
+      "state": "TX",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6803930946948809
+    },
+    {
+      "name": "Clyburn, James E.",
+      "state": "SC",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3318907923772841
+    },
+    {
+      "name": "Meng, Grace",
+      "state": "NY",
+      "district": 6,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.29966530016830006
+    },
+    {
+      "name": "Messer, Luke",
+      "state": "IN",
+      "district": 6,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.897395328871323
+    },
+    {
+      "name": "Gibbs, Bob",
+      "state": "OH",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8693405214409613
+    },
+    {
+      "name": "Long, Billy",
+      "state": "MO",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8132618994740204
+    },
+    {
+      "name": "Bera, Ami",
+      "state": "CA",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.4435163986481513
+    },
+    {
+      "name": "Rice, Tom",
+      "state": "SC",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7105799334586151
+    },
+    {
+      "name": "Lance, Leonard",
+      "state": "NJ",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 60,
+      "ideology_rating": 0.6487383611903363
+    },
+    {
+      "name": "Brat, David Alan",
+      "state": "VA",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.864943761714517
+    },
+    {
+      "name": "Meehan, Patrick",
+      "state": "PA",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.4179516331457454
+    },
+    {
+      "name": "Gallego, Ruben",
+      "state": "AZ",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.2642941029780461
+    },
+    {
+      "name": "Rouzer, David",
+      "state": "NC",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9301745783520046
+    },
+    {
+      "name": "Perlmutter, Ed",
+      "state": "CO",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.3715640139475281
+    },
+    {
+      "name": "Woodall, Rob",
+      "state": "GA",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.5930071772486832
+    },
+    {
+      "name": "Carson, Andre",
+      "state": "IN",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.19265082938889652
+    },
+    {
+      "name": "Jayapal, Pramila",
+      "state": "WA",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.10956787563512138
+    },
+    {
+      "name": "Capuano, Michael E.",
+      "state": "MA",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.24430936933532524
+    },
+    {
+      "name": "Murphy, Stephanie",
+      "state": "FL",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.4467243448394545
+    },
+    {
+      "name": "Velazquez, Nydia",
+      "state": "NY",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.17988462213251746
+    },
+    {
+      "name": "Cummings, Elijah E.",
+      "state": "MD",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.20330548208553142
+    },
+    {
+      "name": "Walberg, Tim",
+      "state": "MI",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.830678838325986
+    },
+    {
+      "name": "Davis, Danny K.",
+      "state": "IL",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.2613206622165658
+    },
+    {
+      "name": "Wild, Susan",
+      "state": "PA",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.4179516331457454
+    },
+    {
+      "name": "Blackburn, Marsha",
+      "state": "TN",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8266922301385561
+    },
+    {
+      "name": "Duffy, Sean",
+      "state": "WI",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7387141258664129
+    },
+    {
+      "name": "Culberson, John A.",
+      "state": "TX",
+      "district": 7,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7997515023690633
+    },
+    {
+      "name": "Peterson, Collin C.",
+      "state": "MN",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 20,
+      "ideology_rating": 0.709387792611632
+    },
+    {
+      "name": "Sewell, Terri",
+      "state": "AL",
+      "district": 7,
+      "party": "D",
+      "environmental_rating": 71,
+      "ideology_rating": 0.4313705687137213
+    },
+    {
+      "name": "Smith, Jason T.",
+      "state": "MO",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8232237588639243
+    },
+    {
+      "name": "Hudson, Richard",
+      "state": "NC",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8722860445255048
+    },
+    {
+      "name": "Lynch, Stephen F.",
+      "state": "MA",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.27708648179727785
+    },
+    {
+      "name": "Bucshon, Larry",
+      "state": "IN",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7804949185703091
+    },
+    {
+      "name": "Brady, Kevin P.",
+      "state": "TX",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6841419656067136
+    },
+    {
+      "name": "Cook, Paul",
+      "state": "CA",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7660885348418127
+    },
+    {
+      "name": "Sires, Albio",
+      "state": "NJ",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.2970534903176509
+    },
+    {
+      "name": "Lesko, Debbie",
+      "state": "AZ",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6794425173235219
+    },
+    {
+      "name": "Bishop, Mike",
+      "state": "MI",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9146485968147015
+    },
+    {
+      "name": "Scott, Austin",
+      "state": "GA",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7958392259491991
+    },
+    {
+      "name": "Kustoff, David",
+      "state": "TN",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7225205126585867
+    },
+    {
+      "name": "Davidson, Warren",
+      "state": "OH",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7102561220874158
+    },
+    {
+      "name": "Reichert, Dave",
+      "state": "WA",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 26,
+      "ideology_rating": 0.5892913065467105
+    },
+    {
+      "name": "Nolan, Rick",
+      "state": "MN",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 77,
+      "ideology_rating": 0.3711260842684052
+    },
+    {
+      "name": "Krishnamoorthi, Raja",
+      "state": "IL",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.33533757961471505
+    },
+    {
+      "name": "Jeffries, Hakeem S.",
+      "state": "NY",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.21627112295705206
+    },
+    {
+      "name": "Raskin, Jamie",
+      "state": "MD",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.12670862169661146
+    },
+    {
+      "name": "Posey, Bill",
+      "state": "FL",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8684320620192215
+    },
+    {
+      "name": "Gallagher, Mike",
+      "state": "WI",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7922838850079644
+    },
+    {
+      "name": "Fitzpatrick, Brian",
+      "state": "PA",
+      "district": 8,
+      "party": "R",
+      "environmental_rating": 83,
+      "ideology_rating": 0.7379877263448299
+    },
+    {
+      "name": "Beyer, Donald",
+      "state": "VA",
+      "district": 8,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.24256812897614172
+    },
+    {
+      "name": "Kaptur, Marcy",
+      "state": "OH",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.27443663701690924
+    },
+    {
+      "name": "Griffith, Morgan",
+      "state": "VA",
+      "district": 9,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.733938482569702
+    },
+    {
+      "name": "Levin, Sander M.",
+      "state": "MI",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.32484343572670293
+    },
+    {
+      "name": "Keating, Bill",
+      "state": "MA",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.309338550076446
+    },
+    {
+      "name": "Soto, Darren",
+      "state": "FL",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.195941650388095
+    },
+    {
+      "name": "Hollingsworth, Trey",
+      "state": "IN",
+      "district": 9,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.6738446313447883
+    },
+    {
+      "name": "Cohen, Steve",
+      "state": "TN",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.19816350452534337
+    },
+    {
+      "name": "Clarke, Yvette D.",
+      "state": "NY",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.11914332219262397
+    },
+    {
+      "name": "Sinema, Kyrsten",
+      "state": "AZ",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 74,
+      "ideology_rating": 0.6974953127755302
+    },
+    {
+      "name": "Green, Al",
+      "state": "TX",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.24574683125484859
+    },
+    {
+      "name": "Collins, Doug",
+      "state": "GA",
+      "district": 9,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7442715763726389
+    },
+    {
+      "name": "Pittenger, Robert",
+      "state": "NC",
+      "district": 9,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.901749160604519
+    },
+    {
+      "name": "McNerney, Jerry",
+      "state": "CA",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.21606239178113618
+    },
+    {
+      "name": "Shuster, Bill",
+      "state": "PA",
+      "district": 9,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6615539208348995
+    },
+    {
+      "name": "Schakowsky, Jan",
+      "state": "IL",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.1035740013346976
+    },
+    {
+      "name": "Smith, Adam",
+      "state": "WA",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.19358614901693708
+    },
+    {
+      "name": "Pascrell, Bill",
+      "state": "NJ",
+      "district": 9,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3575204639124729
+    },
+    {
+      "name": "Hice, Jody",
+      "state": "GA",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9274628619441423
+    },
+    {
+      "name": "McCaul, Michael T.",
+      "state": "TX",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8022476661828254
+    },
+    {
+      "name": "Heck, Denny",
+      "state": "WA",
+      "district": 10,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3859882630233734
+    },
+    {
+      "name": "McHenry, Patrick T.",
+      "state": "NC",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.5945431663533869
+    },
+    {
+      "name": "Payne, Donald M.",
+      "state": "NJ",
+      "district": 10,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.2104823603186956
+    },
+    {
+      "name": "Nadler, Jerrold L.",
+      "state": "NY",
+      "district": 10,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.14917132007108555
+    },
+    {
+      "name": "Comstock, Barbara",
+      "state": "VA",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.730349129653723
+    },
+    {
+      "name": "Mitchell, Paul",
+      "state": "MI",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8179694476980769
+    },
+    {
+      "name": "Denham, Jeff",
+      "state": "CA",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.664051310870137
+    },
+    {
+      "name": "Demings, Val",
+      "state": "FL",
+      "district": 10,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3080666544917332
+    },
+    {
+      "name": "Marino, Tom",
+      "state": "PA",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7223148409477435
+    },
+    {
+      "name": "Turner, Michael R.",
+      "state": "OH",
+      "district": 10,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7316398705406182
+    },
+    {
+      "name": "Schneider, Brad",
+      "state": "IL",
+      "district": 10,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.4463524001693265
+    },
+    {
+      "name": "Trott, Dave",
+      "state": "MI",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7035189941592612
+    },
+    {
+      "name": "Conaway, K. Michael",
+      "state": "TX",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7140948339075904
+    },
+    {
+      "name": "Barletta, Lou",
+      "state": "PA",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8409261033529891
+    },
+    {
+      "name": "Connolly, Gerald E.",
+      "state": "VA",
+      "district": 11,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.33672602742732705
+    },
+    {
+      "name": "Donovan, Daniel M.",
+      "state": "NY",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 26,
+      "ideology_rating": 0.6565556432240213
+    },
+    {
+      "name": "Fudge, Marcia L.",
+      "state": "OH",
+      "district": 11,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.2841833580169205
+    },
+    {
+      "name": "Webster, Daniel",
+      "state": "FL",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7803939206796909
+    },
+    {
+      "name": "Frelinghuysen, Rodney P.",
+      "state": "NJ",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 17,
+      "ideology_rating": 0.5916519876895251
+    },
+    {
+      "name": "DeSaulnier, Mark",
+      "state": "CA",
+      "district": 11,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.16449954366995242
+    },
+    {
+      "name": "Loudermilk, Barry",
+      "state": "GA",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8531732715667073
+    },
+    {
+      "name": "Foster, Bill",
+      "state": "IL",
+      "district": 11,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.34561625721771716
+    },
+    {
+      "name": "Meadows, Mark",
+      "state": "NC",
+      "district": 11,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9361129032790677
+    },
+    {
+      "name": "Bilirakis, Gus",
+      "state": "FL",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7816256329075405
+    },
+    {
+      "name": "Balderson, Troy",
+      "state": "OH",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.4709742345522774
+    },
+    {
+      "name": "Dingell, Debbie",
+      "state": "MI",
+      "district": 12,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.26571639578244777
+    },
+    {
+      "name": "Granger, Kay",
+      "state": "TX",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6476432080775153
+    },
+    {
+      "name": "Pelosi, Nancy",
+      "state": "CA",
+      "district": 12,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.3824464581598751
+    },
+    {
+      "name": "Rothfus, Keith J.",
+      "state": "PA",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8016407644508695
+    },
+    {
+      "name": "Bost, Mike",
+      "state": "IL",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7747555534568121
+    },
+    {
+      "name": "Maloney, Carolyn B.",
+      "state": "NY",
+      "district": 12,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.22055356677571963
+    },
+    {
+      "name": "Adams, Alma",
+      "state": "NC",
+      "district": 12,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2746009518675943
+    },
+    {
+      "name": "Watson Coleman, Bonnie",
+      "state": "NJ",
+      "district": 12,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.12421328093617554
+    },
+    {
+      "name": "Allen, Rick",
+      "state": "GA",
+      "district": 12,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8925485628016865
+    },
+    {
+      "name": "Jones, Brenda",
+      "state": "MI",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.45097966328083494
+    },
+    {
+      "name": "Crist, Charlie",
+      "state": "FL",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3356904535895149
+    },
+    {
+      "name": "Budd, Ted",
+      "state": "NC",
+      "district": 13,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8555585332341065
+    },
+    {
+      "name": "Lee, Barbara J.",
+      "state": "CA",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.009931495300420765
+    },
+    {
+      "name": "Espaillat, Adriano",
+      "state": "NY",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.1807300115487044
+    },
+    {
+      "name": "Ryan, Tim",
+      "state": "OH",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3353193174877628
+    },
+    {
+      "name": "Davis, Rodney",
+      "state": "IL",
+      "district": 13,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7698820340642042
+    },
+    {
+      "name": "Thornberry, Mac",
+      "state": "TX",
+      "district": 13,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6459747712517935
+    },
+    {
+      "name": "Boyle, Brendan",
+      "state": "PA",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.34574252068281336
+    },
+    {
+      "name": "Scott, David",
+      "state": "GA",
+      "district": 13,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.4305717955200164
+    },
+    {
+      "name": "Graves, Tom",
+      "state": "GA",
+      "district": 14,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7646674872912821
+    },
+    {
+      "name": "Weber, Randy K.",
+      "state": "TX",
+      "district": 14,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.8962302357207275
+    },
+    {
+      "name": "Doyle, Mike",
+      "state": "PA",
+      "district": 14,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.39294972723011135
+    },
+    {
+      "name": "Castor, Kathy",
+      "state": "FL",
+      "district": 14,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.27660391751065616
+    },
+    {
+      "name": "Joyce, David P.",
+      "state": "OH",
+      "district": 14,
+      "party": "R",
+      "environmental_rating": 14,
+      "ideology_rating": 0.7314924419064425
+    },
+    {
+      "name": "Crowley, Joseph",
+      "state": "NY",
+      "district": 14,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.30790288240299923
+    },
+    {
+      "name": "Hultgren, Randy",
+      "state": "IL",
+      "district": 14,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8007157371585424
+    },
+    {
+      "name": "Lawrence, Brenda",
+      "state": "MI",
+      "district": 14,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.23786704708026266
+    },
+    {
+      "name": "Gonzalez, Vicente",
+      "state": "TX",
+      "district": 15,
+      "party": "D",
+      "environmental_rating": 74,
+      "ideology_rating": 0.5317388314314748
+    },
+    {
+      "name": "Swalwell, Eric",
+      "state": "CA",
+      "district": 15,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.31598320217117454
+    },
+    {
+      "name": "Shimkus, John M.",
+      "state": "IL",
+      "district": 15,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.6983963678933366
+    },
+    {
+      "name": "Dent, Charlie",
+      "state": "PA",
+      "district": 15,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.42180232067433343
+    },
+    {
+      "name": "Stivers, Steve",
+      "state": "OH",
+      "district": 15,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.845196991132232
+    },
+    {
+      "name": "Serrano, Jose",
+      "state": "NY",
+      "district": 15,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.15075508735971313
+    },
+    {
+      "name": "Ross, Dennis",
+      "state": "FL",
+      "district": 15,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7869391125135865
+    },
+    {
+      "name": "Smucker, Lloyd",
+      "state": "PA",
+      "district": 16,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7725428569883418
+    },
+    {
+      "name": "Buchanan, Vern",
+      "state": "FL",
+      "district": 16,
+      "party": "R",
+      "environmental_rating": 40,
+      "ideology_rating": 0.6257714068628111
+    },
+    {
+      "name": "Kinzinger, Adam",
+      "state": "IL",
+      "district": 16,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.7016085955480498
+    },
+    {
+      "name": "O'Rourke, Beto",
+      "state": "TX",
+      "district": 16,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3560442232373668
+    },
+    {
+      "name": "Costa, Jim",
+      "state": "CA",
+      "district": 16,
+      "party": "D",
+      "environmental_rating": 69,
+      "ideology_rating": 0.5190682945947543
+    },
+    {
+      "name": "Renacci, Jim",
+      "state": "OH",
+      "district": 16,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.836142872446814
+    },
+    {
+      "name": "Engel, Eliot L.",
+      "state": "NY",
+      "district": 16,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.29413975693817296
+    },
+    {
+      "name": "Rooney, Tom",
+      "state": "FL",
+      "district": 17,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7324885650453273
+    },
+    {
+      "name": "Khanna, Ro",
+      "state": "CA",
+      "district": 17,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.18575412534233535
+    },
+    {
+      "name": "Cartwright, Matt A.",
+      "state": "PA",
+      "district": 17,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3301879941226595
+    },
+    {
+      "name": "Flores, Bill",
+      "state": "TX",
+      "district": 17,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8886659077862085
+    },
+    {
+      "name": "Bustos, Cheri",
+      "state": "IL",
+      "district": 17,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.4193387187727951
+    },
+    {
+      "name": "Lowey, Nita M.",
+      "state": "NY",
+      "district": 17,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.30456297316094677
+    },
+    {
+      "name": "LaHood, Darin",
+      "state": "IL",
+      "district": 18,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7462318255177863
+    },
+    {
+      "name": "Mast, Brian",
+      "state": "FL",
+      "district": 18,
+      "party": "R",
+      "environmental_rating": 29,
+      "ideology_rating": 0.6782389777882074
+    },
+    {
+      "name": "Maloney, Sean Patrick",
+      "state": "NY",
+      "district": 18,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.30577285344132416
+    },
+    {
+      "name": "Jackson Lee, Sheila",
+      "state": "TX",
+      "district": 18,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.150540061309545
+    },
+    {
+      "name": "Eshoo, Anna G.",
+      "state": "CA",
+      "district": 18,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2888855975644069
+    },
+    {
+      "name": "Lamb, Conor",
+      "state": "PA",
+      "district": 18,
+      "party": "D",
+      "environmental_rating": 82,
+      "ideology_rating": 0.4201660291438507
+    },
+    {
+      "name": "Rooney, Francis",
+      "state": "FL",
+      "district": 19,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.7858566421267301
+    },
+    {
+      "name": "Arrington, Jodey",
+      "state": "TX",
+      "district": 19,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8017959350693553
+    },
+    {
+      "name": "Faso, John",
+      "state": "NY",
+      "district": 19,
+      "party": "R",
+      "environmental_rating": 37,
+      "ideology_rating": 0.6991431704526393
+    },
+    {
+      "name": "Lofgren, Zoe",
+      "state": "CA",
+      "district": 19,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.24279977454964574
+    },
+    {
+      "name": "Castro, Joaquin",
+      "state": "TX",
+      "district": 20,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.34695080434198644
+    },
+    {
+      "name": "Tonko, Paul D.",
+      "state": "NY",
+      "district": 20,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.25396228612676564
+    },
+    {
+      "name": "Panetta, Jimmy",
+      "state": "CA",
+      "district": 20,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3345355730244057
+    },
+    {
+      "name": "Hastings, Alcee L.",
+      "state": "FL",
+      "district": 20,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.16918514140795174
+    },
+    {
+      "name": "Valadao, David G.",
+      "state": "CA",
+      "district": 21,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.7927662077445371
+    },
+    {
+      "name": "Frankel, Lois",
+      "state": "FL",
+      "district": 21,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.33848469596672254
+    },
+    {
+      "name": "Smith, Lamar S.",
+      "state": "TX",
+      "district": 21,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8954026589974563
+    },
+    {
+      "name": "Stefanik, Elise",
+      "state": "NY",
+      "district": 21,
+      "party": "R",
+      "environmental_rating": 51,
+      "ideology_rating": 0.7805706995737153
+    },
+    {
+      "name": "Tenney, Claudia",
+      "state": "NY",
+      "district": 22,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7836294174075682
+    },
+    {
+      "name": "Deutch, Ted",
+      "state": "FL",
+      "district": 22,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.33099894436565575
+    },
+    {
+      "name": "Nunes, Devin G.",
+      "state": "CA",
+      "district": 22,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6484763356350953
+    },
+    {
+      "name": "Olson, Pete",
+      "state": "TX",
+      "district": 22,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.9226870284583725
+    },
+    {
+      "name": "Hurd, Will",
+      "state": "TX",
+      "district": 23,
+      "party": "R",
+      "environmental_rating": 20,
+      "ideology_rating": 0.6683812471893573
+    },
+    {
+      "name": "McCarthy, Kevin",
+      "state": "CA",
+      "district": 23,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.49931865033757533
+    },
+    {
+      "name": "Wasserman Schultz, Debbie",
+      "state": "FL",
+      "district": 23,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.22670760191090916
+    },
+    {
+      "name": "Reed, Tom",
+      "state": "NY",
+      "district": 23,
+      "party": "R",
+      "environmental_rating": 17,
+      "ideology_rating": 0.6032063420563274
+    },
+    {
+      "name": "Wilson, Frederica",
+      "state": "FL",
+      "district": 24,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.1862916842272531
+    },
+    {
+      "name": "Katko, John",
+      "state": "NY",
+      "district": 24,
+      "party": "R",
+      "environmental_rating": 43,
+      "ideology_rating": 0.662610319595245
+    },
+    {
+      "name": "Carbajal, Salud",
+      "state": "CA",
+      "district": 24,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.28478418446791953
+    },
+    {
+      "name": "Marchant, Kenny E.",
+      "state": "TX",
+      "district": 24,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.8013214282621307
+    },
+    {
+      "name": "Diaz-Balart, Mario",
+      "state": "FL",
+      "district": 25,
+      "party": "R",
+      "environmental_rating": 17,
+      "ideology_rating": 0.6235844049900682
+    },
+    {
+      "name": "Williams, Roger",
+      "state": "TX",
+      "district": 25,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.8175108964789461
+    },
+    {
+      "name": "Knight, Steve",
+      "state": "CA",
+      "district": 25,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.7093291648230139
+    },
+    {
+      "name": "Morelle, Joe",
+      "state": "NY",
+      "district": 25,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.37598401559951256
+    },
+    {
+      "name": "Burgess, Michael C.",
+      "state": "TX",
+      "district": 26,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7422184194090088
+    },
+    {
+      "name": "Higgins, Brian M.",
+      "state": "NY",
+      "district": 26,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3277463557134471
+    },
+    {
+      "name": "Brownley, Julia",
+      "state": "CA",
+      "district": 26,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.3309530542815645
+    },
+    {
+      "name": "Curbelo, Carlos",
+      "state": "FL",
+      "district": 26,
+      "party": "R",
+      "environmental_rating": 57,
+      "ideology_rating": 0.7264831423654168
+    },
+    {
+      "name": "Chu, Judy M.",
+      "state": "CA",
+      "district": 27,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.20308973783754242
+    },
+    {
+      "name": "Cloud, Michael",
+      "state": "TX",
+      "district": 27,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.5487806391536213
+    },
+    {
+      "name": "Ros-Lehtinen, Ileana",
+      "state": "FL",
+      "district": 27,
+      "party": "R",
+      "environmental_rating": 57,
+      "ideology_rating": 0.5729909978311186
+    },
+    {
+      "name": "Farenthold, Blake",
+      "state": "TX",
+      "district": 27,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.5487806391536213
+    },
+    {
+      "name": "Collins, Chris",
+      "state": "NY",
+      "district": 27,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.7686827406365297
+    },
+    {
+      "name": "Cuellar, Henry",
+      "state": "TX",
+      "district": 28,
+      "party": "D",
+      "environmental_rating": 49,
+      "ideology_rating": 0.6288106544500294
+    },
+    {
+      "name": "Schiff, Adam B.",
+      "state": "CA",
+      "district": 28,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.3061939759356458
+    },
+    {
+      "name": "Green, Gene",
+      "state": "TX",
+      "district": 29,
+      "party": "D",
+      "environmental_rating": 83,
+      "ideology_rating": 0.45368587468682664
+    },
+    {
+      "name": "Cárdenas, Tony",
+      "state": "CA",
+      "district": 29,
+      "party": "D",
+      "environmental_rating": 49,
+      "ideology_rating": 0.3365520115788244
+    },
+    {
+      "name": "Johnson, Eddie Bernice",
+      "state": "TX",
+      "district": 30,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.28600806283571123
+    },
+    {
+      "name": "Sherman, Brad J.",
+      "state": "CA",
+      "district": 30,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.43605453245119713
+    },
+    {
+      "name": "Carter, John R.",
+      "state": "TX",
+      "district": 31,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7024561092818974
+    },
+    {
+      "name": "Aguilar, Pete",
+      "state": "CA",
+      "district": 31,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.3156945245938585
+    },
+    {
+      "name": "Napolitano, Grace",
+      "state": "CA",
+      "district": 32,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2219209978256711
+    },
+    {
+      "name": "Sessions, Pete",
+      "state": "TX",
+      "district": 32,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 1
+    },
+    {
+      "name": "Veasey, Marc A.",
+      "state": "TX",
+      "district": 33,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.3387825603482401
+    },
+    {
+      "name": "Lieu, Ted",
+      "state": "CA",
+      "district": 33,
+      "party": "D",
+      "environmental_rating": 89,
+      "ideology_rating": 0.24571945761215547
+    },
+    {
+      "name": "Vela, Filemon",
+      "state": "TX",
+      "district": 34,
+      "party": "D",
+      "environmental_rating": 80,
+      "ideology_rating": 0.4116692432829445
+    },
+    {
+      "name": "Gomez, Jimmy",
+      "state": "CA",
+      "district": 34,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.2822561756625715
+    },
+    {
+      "name": "Doggett, Lloyd A.",
+      "state": "TX",
+      "district": 35,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.32502128953893605
+    },
+    {
+      "name": "Torres, Norma",
+      "state": "CA",
+      "district": 35,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3023630445625525
+    },
+    {
+      "name": "Babin, Brian",
+      "state": "TX",
+      "district": 36,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.9708942669855886
+    },
+    {
+      "name": "Ruiz, Raul",
+      "state": "CA",
+      "district": 36,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.4128073791317179
+    },
+    {
+      "name": "Bass, Karen",
+      "state": "CA",
+      "district": 37,
+      "party": "D",
+      "environmental_rating": 66,
+      "ideology_rating": 0.21976913905365414
+    },
+    {
+      "name": "Sanchez, Linda",
+      "state": "CA",
+      "district": 38,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.29603665063774826
+    },
+    {
+      "name": "Royce, Ed",
+      "state": "CA",
+      "district": 39,
+      "party": "R",
+      "environmental_rating": 9,
+      "ideology_rating": 0.6350507405775516
+    },
+    {
+      "name": "Roybal-Allard, Lucille",
+      "state": "CA",
+      "district": 40,
+      "party": "D",
+      "environmental_rating": 100,
+      "ideology_rating": 0.22313038937287208
+    },
+    {
+      "name": "Takano, Mark",
+      "state": "CA",
+      "district": 41,
+      "party": "D",
+      "environmental_rating": 97,
+      "ideology_rating": 0.17633143241577295
+    },
+    {
+      "name": "Calvert, Ken S.",
+      "state": "CA",
+      "district": 42,
+      "party": "R",
+      "environmental_rating": 6,
+      "ideology_rating": 0.7548953709021011
+    },
+    {
+      "name": "Waters, Maxine",
+      "state": "CA",
+      "district": 43,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.21539549379922368
+    },
+    {
+      "name": "Barragán, Nanette",
+      "state": "CA",
+      "district": 44,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.15951019206005046
+    },
+    {
+      "name": "Walters, Mimi",
+      "state": "CA",
+      "district": 45,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.6700259323166833
+    },
+    {
+      "name": "Correa, J.",
+      "state": "CA",
+      "district": 46,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.40243972002288425
+    },
+    {
+      "name": "Lowenthal, Alan S.",
+      "state": "CA",
+      "district": 47,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.2140549327121419
+    },
+    {
+      "name": "Rohrabacher, Dana T.",
+      "state": "CA",
+      "district": 48,
+      "party": "R",
+      "environmental_rating": 11,
+      "ideology_rating": 0.6495910339273284
+    },
+    {
+      "name": "Issa, Darrell",
+      "state": "CA",
+      "district": 49,
+      "party": "R",
+      "environmental_rating": 3,
+      "ideology_rating": 0.6594761426523226
+    },
+    {
+      "name": "Hunter, Duncan D.",
+      "state": "CA",
+      "district": 50,
+      "party": "R",
+      "environmental_rating": 0,
+      "ideology_rating": 0.7843727017008661
+    },
+    {
+      "name": "Vargas, Juan",
+      "state": "CA",
+      "district": 51,
+      "party": "D",
+      "environmental_rating": 91,
+      "ideology_rating": 0.2791713035043429
+    },
+    {
+      "name": "Peters, Scott H.",
+      "state": "CA",
+      "district": 52,
+      "party": "D",
+      "environmental_rating": 86,
+      "ideology_rating": 0.3688343041463851
+    },
+    {
+      "name": "Davis, Susan A.",
+      "state": "CA",
+      "district": 53,
+      "party": "D",
+      "environmental_rating": 94,
+      "ideology_rating": 0.3041763026592921
+    }
+  ]

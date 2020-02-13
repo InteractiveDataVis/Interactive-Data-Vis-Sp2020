@@ -16,10 +16,22 @@ Start with our setup flow -- this includes [installations](../README.md#setup), 
 Once your installations are complete and you're ready to begin working on your tutorial assignment, use your terminal (or git bash, on PC) to navigate to the _root directory_ of your fork. Your path may look different, but the command will be something like this:
 
 ```sh
-cd Documents/My\ Repositories/Interactive-Data-Vis-Sp2020/
+$ cd Documents/My\ Repositories/Interactive-Data-Vis-Sp2020/
 ```
 
-From this level, (_not from the tutorial folder_), run `serve`. When you open `http://localhost:5000/`, you should see your repository's folder structure. Click into this week's tutorial. The file showing is your `index.html` file. If you want to view the demo file, you have to change your URL path. For example: `http://localhost:5000/TUTORIAL_PATH/demo`.
+From this level, (_not from the tutorial folder_), run:
+
+```sh
+$ serve
+``` 
+
+When you open `http://localhost:5000/`, you should see your repository's folder structure. 
+
+You can view your **tutorial site** at `http://localhost:5000/TUTORIAL_PATH/`. 
+
+You can view our class **demo site** at `http://localhost:5000/TUTORIAL_PATH/demo/`.
+
+(note: make sure to change `TUTORIAL_PATH`). 
 
 As you're working on the assignment, you can always reference the [demo code](demo/).
 
