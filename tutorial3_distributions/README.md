@@ -17,6 +17,21 @@ For this tutorial, you will **still need** to get a [basic server](../BASIC_SERV
 $ cd Documents/My\ Repositories/Interactive-Data-Vis-Sp2020/
 ```
 
+To pull down the latest code from our class repository to your local machine, use the following git commands: 
+
+```sh
+# pulls the upstream changes and stores them in `upstream/master`
+$ git fetch upstream
+```
+You should see the branches from our upstream repository in a list. Then run:
+```sh
+# merges the changes from upstream into your current branch
+$ git merge upstream/master
+```
+If your bash sends you into a `vim` [screen](https://computers.tutsplus.com/tutorials/vim-for-beginners--cms-21118), exit the commit message by typing `:q`. 
+
+This will merge the demo folder, and the updated data, and any updates to the starter code into your local repository. Now you're ready to start coding.
+
 From this level, (_not from the tutorial folder_), run:
 
 ```sh
