@@ -46,7 +46,7 @@ function init() {
   // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data(["All", "D", "R", "I"]) // unique data values-- (hint: to do this programmatically take a look `Sets`)
+    .data(["All", "1", "2", "3"]) // unique data values-- (hint: to do this programmatically take a look `Sets`)
     .join("option")
     .attr("value", d => d)
     .text(d => d);
