@@ -132,15 +132,15 @@ function draw() {
             else if (d.party === "R") return "red";
             else return "purple";
           })
-          .attr("r", radius)
+          .attr("r", 0)
           .attr("cy", d => yScale(d.environmental_rating))
-          .attr("cx", d => margin.left) // initial value - to be transitioned
+          .attr("cx", d => xScale(d.ideology_rating))
           .call(enter =>
             enter
               .transition() // initialize transition
               .delay(d => 500 * d.ideology_rating) // delay on each element
               .duration(500) // duration 500ms
-              .attr("cx", d => xScale(d.ideology_rating))
+              .attr("r", radius)
           ),
       update =>
         update.call(update =>

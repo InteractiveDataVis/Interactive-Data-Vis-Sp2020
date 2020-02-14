@@ -6,9 +6,7 @@ const width = window.innerWidth * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 40 },
   radius = 5;
 
-/** these variables allow us to access anything we manipulate in
- * init() but need access to in draw().
- * All these variables are empty before we assign something to them.*/
+
 let svg;
 let xScale;
 let yScale;
@@ -18,13 +16,13 @@ let yScale;
  * */
 let state = {
   data: [],
-  // + ADD STATE VARIABLE FOR INTERACTION
+  party: "D",
 };
 
 /**
  * LOAD DATA
  * */
-d3.json(YOUR_DATA_PATH, d3.autoType).then(raw_data => {
+d3.json("../data/environmentRatings.json", d3.autoType).then(raw_data => {
   // + SET YOUR DATA PATH
   console.log("raw_data", raw_data);
   state.data = raw_data;
@@ -36,31 +34,24 @@ d3.json(YOUR_DATA_PATH, d3.autoType).then(raw_data => {
  * this will be run *one time* when the data finishes loading in
  * */
 function init() {
-  // SCALES
-  // + xScale =
-  // + yScale =
+  console.log("initing")
 
-  // AXES
-  // + const xAxis =
-  // + const yAxis =
+  svg = d3.select("#svg")
+    .attr("width", width)
+    .attr("height", height)
 
-  // UI ELEMENT SETUP
-  // add dropdown (HTML selection) for interaction
-  // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
   const selectElement = d3.select("#dropdown").on("change", function() {
-    // `this` === the selectElement
-    // 'this.value' holds the dropdown value a user just selected
-
-    // + SET STATE VARIABLE WITH SELECTED VALUE
     console.log("new value is", this.value);
+    state.party = this.value;
     draw(); // re-draw the graph based on this new selection
   });
 
-  // + ADD DROPDOWN OPTIONS
-
-  // + CREATE SVG ELEMENT
-
-  // + CALL AXES
+  selectElement
+    .selectAll("option")
+    .data(["D", "R", "I", "all"])
+    .join("option")
+    .attr("value", d => d)
+    .text(d => d)
 
   draw();
 }
@@ -70,14 +61,26 @@ function init() {
  * we call this everytime there is an update to the data/state
  * */
 function draw() {
+  console.log(state)
+  const filteredData = state.data.filter(d => 
+    state.party === "all" || d.party === state.party
+    )
+
   // + FILTER DATA BASED ON STATE
 
   const dot = svg
     .selectAll("circle")
     .data(filteredData, d => d.name)
     .join(
-      enter => enter, // + HANDLE ENTER SELECTION
-      update => update, // + HANDLE UPDATE SELECTION
-      exit => exit // + HANDLE EXIT SELECTION
+      enter => enter.append("circle")
+        .attr("r", 0)
+        .attr("fill", "black")
+        .attr("cx", (d, i) => i * 5)
+        .attr("cy", (d,i) => i * 5)
+        .call(enter => enter.transition()
+          .duration(500)
+          .attr("r", 2)
+          .attr("fill", )
+        )
     );
 }
