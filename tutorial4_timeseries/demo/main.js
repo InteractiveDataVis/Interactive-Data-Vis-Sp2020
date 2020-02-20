@@ -5,7 +5,7 @@ const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 40 },
   radius = 3,
-  default_selection = "Select a Country"
+  default_selection = "Select a Country";
 
 /** these variables allow us to access anything we manipulate in
  * init() but need access to in draw().
@@ -29,7 +29,7 @@ let state = {
 d3.csv("../../data/populationOverTime.csv", d => ({
   year: new Date(d.Year, 0, 1),
   country: d.Entity,
-  population: +d.Population
+  population: +d.Population,
 })).then(raw_data => {
   console.log("raw_data", raw_data);
   state.data = raw_data;
@@ -45,7 +45,7 @@ function init() {
   xScale = d3
     .scaleTime()
     .domain(d3.extent(state.data, d => d.year))
-    .range([margin.left, width - margin.right]);  
+    .range([margin.left, width - margin.right]);
 
   yScale = d3
     .scaleLinear()
@@ -54,35 +54,30 @@ function init() {
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  yAxis = d3.axisLeft(yScale)
-    .tickFormat(d3.format(".2s"))
+  yAxis = d3.axisLeft(yScale).tickFormat(d3.format(".2s"));
 
   // UI ELEMENT SETUP
-  // add dropdown (HTML selection) for interaction
-  // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
-  const selectElement = d3
-    .select("#dropdown")
-    .on("change", function() {
-      console.log("new selected entity is", this.value);
-      // `this` === the selectElement
-      // this.value holds the dropdown value a user just selected
-      state.selectedCountry = this.value;
-      draw(); // re-draw the graph based on this new selection
-    });
+  const selectElement = d3.select("#dropdown").on("change", function() {
+    console.log("new selected entity is", this.value);
+    // `this` === the selectElement
+    // this.value holds the dropdown value a user just selected
+    state.selectedCountry = this.value;
+    draw(); // re-draw the graph based on this new selection
+  });
 
   // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data(
-      [ 
-        ...Array.from(new Set (state.data.map(d => d.country))), default_selection
-      ])
+    .data([
+      ...Array.from(new Set(state.data.map(d => d.country))),
+      default_selection,
+    ])
     .join("option")
     .attr("value", d => d)
-    .text(d => d)
-    
+    .text(d => d);
+
   // this ensures that the selected value is the same as what we have in state when we initialize the options
-  selectElement.property("value", default_selection)
+  selectElement.property("value", default_selection);
 
   // create an svg element in our main `d3-container` element
   svg = d3
@@ -112,7 +107,7 @@ function init() {
     .append("text")
     .attr("class", "axis-label")
     .attr("y", "50%")
-    .attr("dx", "-4em")
+    .attr("dx", "-3em")
     .attr("writing-mode", "vertical-rl")
     .text("Population");
 
@@ -125,32 +120,36 @@ function init() {
  * */
 function draw() {
   // filter the data for the selectedParty
-  let filteredData
+  let filteredData;
   if (state.selectedCountry !== null) {
-    filteredData = state.data.filter(d => d.country === state.selectedCountry)
+    filteredData = state.data.filter(d => d.country === state.selectedCountry);
   }
 
-  yScale.domain([0, d3.max(filteredData, d => d.population)])
+  // update the scale domain (now that our data has changed)
+  yScale.domain([0, d3.max(filteredData, d => d.population)]);
 
+  // re-draw our yAxix since our yScale is updated with the new data
   d3.select("g.y-axis")
     .transition()
-      .duration(1000)
-      .call(yAxis.scale(yScale))
+    .duration(1000)
+    .call(yAxis.scale(yScale)); // this updates the yAxis' scale to be our newly updated one
 
-  const lineFunc = d3.line()
+  // we define our line function generator telling it how to access the x,y values for each point
+  const lineFunc = d3
+    .line()
     .x(d => xScale(d.year))
-    .y(d => yScale(d.population))
+    .y(d => yScale(d.population));
 
   const dot = svg
     .selectAll(".dot")
-    .data(filteredData, d => d.year) // use `d.name` as the `key` to match between HTML and data elements
+    .data(filteredData, d => d.year) // use `d.year` as the `key` to match between HTML and data elements
     .join(
       enter =>
         // enter selections -- all data elements that don't have a `.dot` element attached to them yet
         enter
           .append("circle")
           .attr("class", "dot") // Note: this is important so we can identify it in future updates
-          .attr("r", radius) 
+          .attr("r", radius)
           .attr("cy", height - margin.bottom) // initial value - to be transitioned
           .attr("cx", d => xScale(d.year)),
       update => update,
@@ -164,27 +163,34 @@ function draw() {
             .attr("cy", height - margin.bottom)
             .remove()
         )
-    ).call(selection =>
-      selection
-        .transition() // initialize transition
+    )
+    // the '.join()' function leaves us with the 'Enter' + 'Update' selections together.
+    // Now we just need move them to the right place
+    .call(
+      selection =>
+        selection
+          .transition() // initialize transition
           .duration(1000) // duration 1000ms / 1s
           .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
-    )
-  
-    const line = svg
-      .selectAll("path.trend")
-      .data([filteredData])
-      .join(
-        enter => enter.append("path")
-          .attr("class", "trend")
-          .attr("opacity", 0)
-          .call(enter => enter.transition()
-            .duration(1000)
-            .attr("opacity", 1)
-            .attr("d", d => lineFunc(d))),
-        update => update.call(update => update.transition()
-          .duration(1000)
-          .attr("d", d => lineFunc(d))), 
-        exit => exit.remove())
+    );
 
+  const line = svg
+    .selectAll("path.trend")
+    .data([filteredData])
+    .join(
+      enter =>
+        enter
+          .append("path")
+          .attr("class", "trend")
+          .attr("opacity", 0), // start them off as opacity 0 and fade them in
+      update => update, // pass through the update selection
+      exit => exit.remove()
+    )
+    .call(selection =>
+      selection
+        .transition() // sets the transition on the 'Enter' + 'Update' selections together.
+        .duration(1000)
+        .attr("opacity", 1)
+        .attr("d", d => lineFunc(d))
+    );
 }

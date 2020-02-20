@@ -13,58 +13,34 @@ let svg;
 let xScale;
 let yScale;
 
-/**
- * APPLICATION STATE
- * */
+/* APPLICATION STATE */
 let state = {
   data: [],
-  selectedCountry: "South Africa",
+  selection: "All", // + YOUR FILTER SELECTION
 };
 
-/**
- * LOAD DATA
- * */
-d3.csv("../../data/populationOverTime.csv", d => ({
-  year: new Date(d.Year, 0, 1),
-  country: d.Entity,
-  population: +d.Population
-})).then(raw_data => {
+/* LOAD DATA */
+// + SET YOUR DATA PATH
+d3.json(YOUR_DATA_PATH, d3.autoType).then(raw_data => {
   console.log("raw_data", raw_data);
-  const filteredData = raw_data.filter(d => d.country !== "World" && d.country !== "Asia" && d.country !== "Africa");
-  state.data = filteredData
+  state.data = raw_data;
   init();
 });
 
-/**
- * INITIALIZING FUNCTION
- * this will be run *one time* when the data finishes loading in
- * */
+/* INITIALIZING FUNCTION */
+// this will be run *one time* when the data finishes loading in
 function init() {
-  // SCALES
-  xScale = d3
-    .scaleTime()
-    .domain(d3.extent(state.data, d => d.year))
-    .range([margin.left, width - margin.right]);  
+  // + SCALES
 
-  yScale = d3
-    .scaleLinear()
-    .domain([0, d3.max(state.data, d => d.population)])
-    .range([height - margin.bottom, margin.top]);
+  // + AXES
 
-  // AXES
-  const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale);
+  // + UI ELEMENT SETUP
 
-  // UI ELEMENT SETUP
-  // add dropdown (HTML selection) for interaction
-  // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
-  const selectElement = d3
-    .select("#dropdown")
-    .on("change", function() {
-    console.log("new selected entity is", this.value);
+  const selectElement = d3.select("#dropdown").on("change", function() {
     // `this` === the selectElement
-    // this.value holds the dropdown value a user just selected
-    state.selectedCountry = this.value;
+    // 'this.value' holds the dropdown value a user just selected
+    state.selection = this.value; // + UPDATE STATE WITH YOUR SELECTED VALUE
+    console.log("new value is", this.value);
     draw(); // re-draw the graph based on this new selection
   });
 
