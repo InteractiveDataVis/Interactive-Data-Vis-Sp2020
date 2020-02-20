@@ -1,11 +1,10 @@
-# Tutorial 3
+# Tutorial 4
 
 The goals for this tutorial are:
 
-- to introduce the data join lifecycle through [enter, update, and exit selections](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection_join). 
-- to introduce a new file structure ("boilerplate") that will allow us to incorporate application `state`.
-- to learn basic [d3-transitions](https://github.com/d3/d3-transition), and leverage them to enhance understanding of the data.
-- to learn to work with HTML UI elements, like [select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) or [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input), and basic event listeners.
+- Introduce d3 line generators
+- Reinforce the boilerplate logic to understand the data lifecycle
+- Practice transitions on new types of elements
 
 ## How to setup, serve, and deploy:
 
@@ -48,19 +47,21 @@ You can view our class **demo site** at `http://localhost:5000/TUTORIAL_PATH/dem
 
 As you're working on the assignment, you can always reference the [demo code](demo/).
 
-## Week 3 Assignment:
+## Week 4 Assignment:
 
-- [ ] Implement your own scatterplot with a *different dataset* than the one used in our demo. 
+- [ ] Implement your own line chart *with a different dataset* than the one used in our demo. 
 
-- [ ] Implement a different transition than the one used in the demo (i.e., your dots should not move from left to center to right on transitions). Consider other visible properties that could change as an object is entering, exiting, etc. and what that change suggests about the state of that data point.
+- [ ] Turn this line chart into an (area chart)[]. Note: this requires referencing the d3 documention to understand the similarities and differences between the area function generator and the line function generator we did in class. 
 
 - [ ] Make intentional design decisions -- colors, sizes, axes, transitions, etc. should illustrate something interesting about or relevant to your data. 
 
-- [ ] Post your [deployed](#Deploy) link to the Tutorial 3 post on the Commons.
+- [ ] Post your [deployed](#Deploy) link to the Tutorial 4 post on the Commons.
 
 **BONUS:**
 
-- [ ] Add another UI element to your page. This means that the element should (1) update `state`, and just as the dropdown does, (2) call `draw()` on change, and (3) affect the data appropriately. Some ideas include another dropdown for another value, radio buttons, checkbox, an input field with a threshold value, etc. 
+- [ ] Turn this single line chart into a multi-line chart, either with this data or with your own. 
+
+- [ ] Add hover activity to your path line or your circles using js, not css. 
 
 ### Deploy
 
