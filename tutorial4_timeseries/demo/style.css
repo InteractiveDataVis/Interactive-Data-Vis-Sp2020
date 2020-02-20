@@ -17,3 +17,8 @@ body {
   fill: black;
   text-anchor: middle;
 }
+
+.trend {
+  fill: none;
+  stroke: black;
+}

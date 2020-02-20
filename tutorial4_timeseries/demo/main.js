@@ -4,7 +4,7 @@
 const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 40 },
-  radius = 5;
+  radius = 3;
 
 /** these variables allow us to access anything we manipulate in
  * init() but need access to in draw().
@@ -12,25 +12,24 @@ const width = window.innerWidth * 0.7,
 let svg;
 let xScale;
 let yScale;
+let yAxis;
 
 /**
  * APPLICATION STATE
  * */
 let state = {
   data: [],
-  selectedMonth: 01,
+  selectedCountry: "World",
 };
 
 /**
  * LOAD DATA
  * */
-d3.csv("../../data/globalTemperatures.csv", function(d) {
-  return {
-    year: new Date(d.Year, 0, 1),
-    smoothing: +d.No_Smoothing,
-    lowess: +d['Lowess(5)']
-  }
-}).then(raw_data => {
+d3.csv("../../data/populationOverTime.csv", d => ({
+  year: new Date(d.Year, 0, 1),
+  country: d.Entity,
+  population: +d.Population
+})).then(raw_data => {
   console.log("raw_data", raw_data);
   state.data = raw_data;
   init();
@@ -44,36 +43,41 @@ function init() {
   // SCALES
   xScale = d3
     .scaleTime()
-    .domain(d3.extent(d => d.year))
+    .domain(d3.extent(state.data, d => d.year))
     .range([margin.left, width - margin.right]);  
 
   yScale = d3
     .scaleLinear()
-    .domain(d3.extent(state.data, d => d.Anomaly))
+    .domain([0, d3.max(state.data, d => d.population)])
     .range([height - margin.bottom, margin.top]);
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale);
+  yAxis = d3.axisLeft(yScale);
 
   // UI ELEMENT SETUP
   // add dropdown (HTML selection) for interaction
   // HTML select reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
-  const selectElement = d3.select("#dropdown").on("change", function() {
-    console.log("new selected month is", this.value);
+  const selectElement = d3
+    .select("#dropdown")
+    .on("change", function() {
+    console.log("new selected entity is", this.value);
     // `this` === the selectElement
     // this.value holds the dropdown value a user just selected
-    state.selectedMonth = this.value;
+    state.selectedCountry = this.value;
     draw(); // re-draw the graph based on this new selection
   });
 
   // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data(Array.from(new Set (state.data.map(d => d.month))))
+    .data(Array.from(new Set (state.data.map(d => d.country))))
     .join("option")
     .attr("value", d => d)
-    .text(d => d);
+    .text(d => d)
+    
+  // this ensures that the selected value is the same as what we have in state when we initialize the options
+  selectElement.property("value", state.selectedCountry)
 
   // create an svg element in our main `d3-container` element
   svg = d3
@@ -105,7 +109,7 @@ function init() {
     .attr("y", "50%")
     .attr("dx", "-3em")
     .attr("writing-mode", "vertical-rl")
-    .text("Anomaly");
+    .text("Population");
 
   draw(); // calls the draw function
 }
@@ -116,11 +120,26 @@ function init() {
  * */
 function draw() {
   // filter the data for the selectedParty
-  const filteredData = state.data
+  let filteredData
+  if (state.selectedCountry !== null) {
+    filteredData = state.data.filter(d => d.country === state.selectedCountry)
+  }
+
+  yScale.domain([0, d3.max(filteredData, d => d.population)])
+
+  d3.select("g.y-axis")
+    .transition()
+      .duration(1000)
+      .call(yAxis.scale(yScale))
+
+  const lineFunc = d3.line()
+    .x(d => xScale(d.year))
+    .y(d => yScale(d.population))
 
   const dot = svg
     .selectAll(".dot")
-    .data(filteredData, d => d.name) // use `d.name` as the `key` to match between HTML and data elements
+    // .data(filteredData, d => `${d.country}_${d.year}`) // use `d.name` as the `key` to match between HTML and data elements
+    .data(filteredData, d => d.year) // use `d.name` as the `key` to match between HTML and data elements
     .join(
       enter =>
         // enter selections -- all data elements that don't have a `.dot` element attached to them yet
@@ -130,36 +149,48 @@ function draw() {
           .attr("stroke", "lightgrey")
           .attr("opacity", 0.5)
           .attr("fill",  "purple")
-          .attr("r", radius)
-          .attr("cy", d => yScale(d.year))
-          .attr("cx", d => margin.left) // initial value - to be transitioned
+          .attr("r", radius) 
+          .attr("cy", height - margin.bottom) // initial value - to be transitioned
+          .attr("cx", d => xScale(d.year)) 
           .call(enter =>
             enter
               .transition() // initialize transition
-              .delay(d => 500 * d.Anomaly) // delay on each element
-              .duration(500) // duration 500ms
-              .attr("cx", d => xScale(d.Anomaly))
+              .duration(1000) // duration 1000ms / 1s
+              .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
           ),
-      update =>
-        update.call(update =>
-          // update selections -- all data elements that match with a `.dot` element
-          update
-            .transition()
-            .duration(250)
-            .attr("stroke", "black")
-            .transition()
-            .duration(250)
-            .attr("stroke", "lightgrey")
+      update => update
+        .call(enter =>
+          enter
+            .transition() // initialize transition
+            .duration(1000) // duration 1000ms / 1s
+            .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
         ),
       exit =>
         exit.call(exit =>
           // exit selections -- all the `.dot` element that no longer match to HTML elements
           exit
             .transition()
-            .delay(d => 50 * d.Anomaly)
+            .delay(d => d.year)
             .duration(500)
-            .attr("cx", width)
+            .attr("cy", height - margin.bottom)
             .remove()
         )
     );
+  
+    const line = svg
+      .selectAll("path.trend")
+      .data([filteredData])
+      .join(
+        enter => enter.append("path")
+          .attr("class", "trend")
+          .attr("opacity", 0)
+          .call(enter => enter.transition()
+            .duration(1000)
+            .attr("opacity", 1)
+            .attr("d", d => lineFunc(d))),
+        update => update.call(update => update.transition()
+          .duration(1000)
+          .attr("d", d => lineFunc(d))), 
+        exit => exit.remove())
+
 }
