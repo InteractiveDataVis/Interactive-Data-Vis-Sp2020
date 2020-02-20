@@ -54,7 +54,8 @@ function init() {
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  yAxis = d3.axisLeft(yScale);
+  yAxis = d3.axisLeft(yScale)
+    .tickFormat(d3.format(".2s"))
 
   // UI ELEMENT SETUP
   // add dropdown (HTML selection) for interaction
@@ -111,7 +112,7 @@ function init() {
     .append("text")
     .attr("class", "axis-label")
     .attr("y", "50%")
-    .attr("dx", "-3em")
+    .attr("dx", "-4em")
     .attr("writing-mode", "vertical-rl")
     .text("Population");
 
