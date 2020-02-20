@@ -6,6 +6,8 @@ body {
 
 .dot {
   cursor: pointer;
+  color: steelblue;
+  opacity: 0.5;
 }
 
 .dot:hover {
