@@ -2,9 +2,9 @@
 
 The goals for this tutorial are:
 
-- Introduce d3 line generators
-- Reinforce the boilerplate logic to understand the data lifecycle
-- Practice transitions on new types of elements
+- Introduce [d3 line](https://github.com/d3/d3-shape#lines) generators, and solidify how a function generator works differently than the appending and manipulating elements we've done so far.
+- Reinforce the boilerplate logic, with some slight updates, to further understand the data lifecycle (both for javascript and d3.js enter, update, and exit).
+- Practice [transitions](https://github.com/d3/d3-transition) on elements we know already, but also introduce new types of transitions on scales.
 
 ## How to setup, serve, and deploy:
 
@@ -51,7 +51,7 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 - [ ] Implement your own line chart *with a different dataset* than the one used in our demo. 
 
-- [ ] Turn this line chart into an (area chart)[]. Note: this requires referencing the d3 documention to understand the similarities and differences between the area function generator and the line function generator we did in class. 
+- [ ] Turn this line chart into an [area chart](https://github.com/d3/d3-shape#areas). **Tip**: Think first about how that would be drawn on the screen. What are you creating on the svg? This requires referencing the d3 documention to understand the similarities and differences between the area function generator and the line function generator. 
 
 - [ ] Make intentional design decisions -- colors, sizes, axes, transitions, etc. should illustrate something interesting about or relevant to your data. 
 
@@ -61,7 +61,7 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 - [ ] Turn this single line chart into a multi-line chart, either with this data or with your own. 
 
-- [ ] Add hover activity to your path line or your circles using js, not css. 
+- [ ] Add hover activity to your path line or circles. Try doing this only with javascript `.on("mouseover", ...)`, before resorting to the css method, `:hover`.
 
 ### Deploy
 
@@ -71,10 +71,14 @@ To receive full credit, you must post your stable path before the start of the n
 
 ## Resources:
 
+[d3 line](https://github.com/d3/d3-shape#lines)
+
+[d3 area](https://github.com/d3/d3-shape#areas)
+
 [d3 scales](https://github.com/d3/d3-scale)
 
 [d3 transitions](https://github.com/d3/d3/blob/master/API.md#transitions-d3-transition)
 
 [d3 join]((https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection_join))
 
-[MDN HTML input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+[MDN HTML selection](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
