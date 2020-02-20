@@ -166,9 +166,13 @@ function draw() {
     )
     // the '.join()' function leaves us with the 'Enter' + 'Update' selections together.
     // Now we just need move them to the right place
-    .transition() // initialize transition
-    .duration(1000) // duration 1000ms / 1s
-    .attr("cy", d => yScale(d.population)); // started from the bottom, now we're here
+    .call(
+      selection =>
+        selection
+          .transition() // initialize transition
+          .duration(1000) // duration 1000ms / 1s
+          .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
+    );
 
   const line = svg
     .selectAll("path.trend")
@@ -182,8 +186,11 @@ function draw() {
       update => update, // pass through the update selection
       exit => exit.remove()
     )
-    .transition() // sets the transition on the 'Enter' + 'Update' selections together.
-    .duration(1000)
-    .attr("opacity", 1)
-    .attr("d", d => lineFunc(d));
+    .call(selection =>
+      selection
+        .transition() // sets the transition on the 'Enter' + 'Update' selections together.
+        .duration(1000)
+        .attr("opacity", 1)
+        .attr("d", d => lineFunc(d))
+    );
 }
