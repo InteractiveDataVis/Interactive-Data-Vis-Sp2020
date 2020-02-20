@@ -4,7 +4,8 @@
 const width = window.innerWidth * 0.7,
   height = window.innerHeight * 0.7,
   margin = { top: 20, bottom: 50, left: 60, right: 40 },
-  radius = 3;
+  radius = 3,
+  default_selection = "Select a Country"
 
 /** these variables allow us to access anything we manipulate in
  * init() but need access to in draw().
@@ -19,7 +20,7 @@ let yAxis;
  * */
 let state = {
   data: [],
-  selectedCountry: "World",
+  selectedCountry: null,
 };
 
 /**
@@ -53,7 +54,8 @@ function init() {
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  yAxis = d3.axisLeft(yScale);
+  yAxis = d3.axisLeft(yScale)
+    .tickFormat(d3.format(".2s"))
 
   // UI ELEMENT SETUP
   // add dropdown (HTML selection) for interaction
@@ -61,23 +63,26 @@ function init() {
   const selectElement = d3
     .select("#dropdown")
     .on("change", function() {
-    console.log("new selected entity is", this.value);
-    // `this` === the selectElement
-    // this.value holds the dropdown value a user just selected
-    state.selectedCountry = this.value;
-    draw(); // re-draw the graph based on this new selection
-  });
+      console.log("new selected entity is", this.value);
+      // `this` === the selectElement
+      // this.value holds the dropdown value a user just selected
+      state.selectedCountry = this.value;
+      draw(); // re-draw the graph based on this new selection
+    });
 
   // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data(Array.from(new Set (state.data.map(d => d.country))))
+    .data(
+      [ 
+        ...Array.from(new Set (state.data.map(d => d.country))), default_selection
+      ])
     .join("option")
     .attr("value", d => d)
     .text(d => d)
     
   // this ensures that the selected value is the same as what we have in state when we initialize the options
-  selectElement.property("value", state.selectedCountry)
+  selectElement.property("value", default_selection)
 
   // create an svg element in our main `d3-container` element
   svg = d3
@@ -107,7 +112,7 @@ function init() {
     .append("text")
     .attr("class", "axis-label")
     .attr("y", "50%")
-    .attr("dx", "-3em")
+    .attr("dx", "-4em")
     .attr("writing-mode", "vertical-rl")
     .text("Population");
 
@@ -138,7 +143,6 @@ function draw() {
 
   const dot = svg
     .selectAll(".dot")
-    // .data(filteredData, d => `${d.country}_${d.year}`) // use `d.name` as the `key` to match between HTML and data elements
     .data(filteredData, d => d.year) // use `d.name` as the `key` to match between HTML and data elements
     .join(
       enter =>
@@ -146,25 +150,10 @@ function draw() {
         enter
           .append("circle")
           .attr("class", "dot") // Note: this is important so we can identify it in future updates
-          .attr("stroke", "lightgrey")
-          .attr("opacity", 0.5)
-          .attr("fill",  "purple")
           .attr("r", radius) 
           .attr("cy", height - margin.bottom) // initial value - to be transitioned
-          .attr("cx", d => xScale(d.year)) 
-          .call(enter =>
-            enter
-              .transition() // initialize transition
-              .duration(1000) // duration 1000ms / 1s
-              .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
-          ),
-      update => update
-        .call(enter =>
-          enter
-            .transition() // initialize transition
-            .duration(1000) // duration 1000ms / 1s
-            .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
-        ),
+          .attr("cx", d => xScale(d.year)),
+      update => update,
       exit =>
         exit.call(exit =>
           // exit selections -- all the `.dot` element that no longer match to HTML elements
@@ -175,7 +164,12 @@ function draw() {
             .attr("cy", height - margin.bottom)
             .remove()
         )
-    );
+    ).call(selection =>
+      selection
+        .transition() // initialize transition
+          .duration(1000) // duration 1000ms / 1s
+          .attr("cy", d => yScale(d.population)) // started from the bottom, now we're here
+    )
   
     const line = svg
       .selectAll("path.trend")
