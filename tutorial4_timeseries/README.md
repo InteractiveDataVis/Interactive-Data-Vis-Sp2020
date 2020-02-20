@@ -2,9 +2,9 @@
 
 The goals for this tutorial are:
 
-- x
-- y
-- z
+- Introduce d3 line generators
+- Reinforce the boilerplate logic to understand the data lifecycle
+- Practice transitions on new types of elements
 
 ## How to setup, serve, and deploy:
 
@@ -49,9 +49,9 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 ## Week 4 Assignment:
 
-- [ ] Implement your own line chart with a *different dataset* than the one used in our demo. 
+- [ ] Implement your own line chart *with a different dataset* than the one used in our demo. 
 
-- [ ] Implement ...
+- [ ] Turn this line chart into an (area chart)[]. Note: this requires referencing the d3 documention to understand the similarities and differences between the area function generator and the line function generator we did in class. 
 
 - [ ] Make intentional design decisions -- colors, sizes, axes, transitions, etc. should illustrate something interesting about or relevant to your data. 
 
@@ -59,7 +59,9 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 **BONUS:**
 
-- [ ] ...
+- [ ] Turn this single line chart into a multi-line chart, either with this data or with your own. 
+
+- [ ] Add hover activity to your path line or your circles using js, not css. 
 
 ### Deploy
 
