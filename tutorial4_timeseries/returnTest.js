@@ -1,5 +1,5 @@
 
-const duration = 200
+const duration = 500
 
 const selection_with_transition = d3.select("#selection-transition")
   .selectAll("div.transition")

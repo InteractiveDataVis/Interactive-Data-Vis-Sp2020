@@ -1,3 +1,7 @@
 .transition, .call {
   margin: 15px;
 }
+
+axis {
+  fill: black;
+}

@@ -1,13 +1,14 @@
 /* CONSTANTS AND GLOBALS */
-const width = window.innerWidth * 0.7,
-  height = window.innerHeight * 0.7,
+const width = window.innerWidth * 0.9,
+  height = window.innerHeight * 0.9,
   margin = { top: 20, bottom: 50, left: 60, right: 40 },
-  radius = 3;
-  default_selection = "Select a Country";
+  radius = 2;
+  default_selection = "India";
 
 let svg;
 let xScale;
 let yScale;
+let yAxis;
 
 /* APPLICATION STATE */
 let state = {
@@ -21,7 +22,7 @@ d3.csv("../../data/populationOverTime.csv",  d => ({
   country: d.Entity,
   population: +d.Population,
 })).then(raw_data => {
-  console.log("raw_data length:", raw_data.length);
+  console.log("raw_data length:", raw_data);
   state.data = raw_data;
   init();
 });
@@ -42,7 +43,8 @@ function init() {
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  const yAxis = d3.axisLeft(yScale).tickFormat(d3.format(".2s"));
+  yAxis = d3.axisLeft(yScale)
+    .tickFormat(d3.format(",.2s"));
 
   const selectElement = d3.select("#dropdown").on("change", function() {
     state.selectedCountry = this.value;
@@ -53,10 +55,8 @@ function init() {
   // add in dropdown options from the unique values in the data
   selectElement
     .selectAll("option")
-    .data([
-      ...Array.from(new Set(state.data.map(d => d.country))),
-      default_selection,
-    ])
+    .data(Array.from(
+        new Set(state.data.map(d => d.country))))
     .join("option")
     .attr("value", d => d)
     .text(d => d)
@@ -80,6 +80,7 @@ function init() {
     .attr("class", "axis-label")
     .attr("x", "50%")
     .attr("dy", "3em")
+    .attr("fill", "black")
     .text("Year");
 
   // add the yAxis
@@ -107,6 +108,19 @@ function draw() {
     console.log("filteredData length:", filteredData.length)
   }
 
+  yScale.domain([0, d3.max(filteredData, d => d.population)])
+
+  d3.select("g.y-axis")
+    .transition()
+      .duration(1000)
+      .call(yAxis.scale(yScale))
+
+  const lineFunc = d3.line()
+    .x(d => xScale(d.year))
+    .y(d => yScale(d.population))
+
+  console.log(lineFunc(filteredData))
+
   const dot = svg
     .selectAll(".dot")
     .data(filteredData, d => d.year) 
@@ -114,22 +128,12 @@ function draw() {
       enter => enter
           .append("circle")
           .attr("class", "dot") 
-          .attr("stroke", "lightgrey")
-          .attr("opacity", 0.5)
+          .attr("opacity", (d,i) => i % 3 ? 0 : 1)
           .attr("fill",  "purple")
           .attr("r", radius) 
           .attr("cy", height - margin.bottom)
-          .attr("cx", d => xScale(d.year))
-          .call(enter => enter
-              .transition() 
-              .duration(1000)
-              .attr("cy", d => yScale(d.population)) 
-          ),
-      update => update.call(update => update
-            .transition() 
-            .duration(1000) 
-            .attr("cy", d => yScale(d.population)) 
-        ),
+          .attr("cx", d => xScale(d.year)),
+      update => update,
       exit => exit.call(exit => exit
             .transition()
             .delay((_, i) => i * 50)
@@ -137,5 +141,23 @@ function draw() {
             .attr("cy", height - margin.bottom)
             .remove()
         )
-    )
+    ).call(sel => sel
+      .transition() 
+      .duration(1000) 
+      .attr("cy", d => yScale(d.population)) 
+  )
+
+    const line = svg.selectAll('path.trend')
+        .data([filteredData])
+        .join(
+          enter => enter.append("path")
+            .attr("class", "trend")
+            .attr("d", d => lineFunc(d))
+            .attr("fill", "none")
+            .attr("stroke", "black"),
+          update => update
+            .call(sel => sel.transition()
+              .duration(1000)
+              .attr("d", d => lineFunc(d)))
+        )
 }
