@@ -15,6 +15,11 @@ let svg;
  * */
 let state = {
   topojson: null,
+  tooltip: {
+    "lattitude": null,
+    "longitude": null,
+    "state": null
+  }
 };
 
 /**
@@ -45,11 +50,23 @@ function init() {
     .attr("height", height);
 
   svg.selectAll(".state")
-      .data(state.geojson.features)
-    .enter().append("path")
+    .data(state.geojson.features)
+    .join("path")
       .attr("d", path)
       .attr("class", "state")
-      .attr("fill", "none")
+      .attr("fill", "white")
+      .on("mouseover", d => { 
+        state.tooltip['state'] = d.properties.NAME
+        draw() // re-call the draw function when we   set a new hoveredState
+      })
+
+  svg.on("mousemove", d => {
+    const [mx, my] = d3.mouse(svg.node())
+    const proj = projection.invert([mx, my])
+    state.tooltip['lattitude'] = proj[0],
+    state.tooltip['longitude'] = proj[1]
+    draw()
+  })
 
   draw(); // calls the draw function
 }
@@ -59,5 +76,17 @@ function init() {
  * we call this everytime there is an update to the data/state
  * */
 function draw() {
+
+  let tooltipData = []
+  if (Object.values(state.tooltip).reduce((t,v) => t || v !== null, false)) {
+    tooltipData = Object.entries(state.tooltip)
+  }
+
+  d3.select("#tooltip")
+    .selectAll('div.content')
+    .data(tooltipData)
+    .join("div")
+      .attr("class", "content")
+      .html(d => `${d[0]}: ${d[1]}`)
 
 }
