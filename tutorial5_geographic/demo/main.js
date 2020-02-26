@@ -14,7 +14,8 @@ let svg;
  * APPLICATION STATE
  * */
 let state = {
-  topojson: null,
+  geojson: null,
+  extremes: null,
   tooltip: {
     "lattitude": null,
     "longitude": null,
@@ -24,10 +25,15 @@ let state = {
 
 /**
  * LOAD DATA
+ * Using a Promise.all([]), we can load more than one dataset at a time
  * */
-d3.json("../../data/us-state.json").then(raw_data => {
-  console.log("raw_data", raw_data);
-  state.geojson = raw_data;
+Promise.all([
+  d3.json("../../data/us-state.json"),
+  d3.csv("../../data/usHeatExtremes.csv", d3.autoType)
+]).then(([geojson, extremes]) => {
+  state.geojson = geojson;
+  state.extremes = extremes;
+  console.log("state: ", state)
   init();
 });
 
@@ -37,10 +43,10 @@ d3.json("../../data/us-state.json").then(raw_data => {
  * */
 function init() {
 
+  // our projection and path are only defined once, and we don't need to access them in the draw function, 
+  // so they can be locally scoped to init()
   const projection = d3.geoAlbersUsa().fitSize([width, height], state.geojson)
-  const path = d3.geoPath()
-    .projection(projection)
-    .pointRadius(2);
+  const path = d3.geoPath().projection(projection)
 
   // create an svg element in our main `d3-container` element
   svg = d3
@@ -50,22 +56,38 @@ function init() {
     .attr("height", height);
 
   svg.selectAll(".state")
+    // all of the features of the geojson, meaning all the states as individuals
     .data(state.geojson.features)
     .join("path")
       .attr("d", path)
       .attr("class", "state")
-      .attr("fill", "white")
+      .attr("fill", "transparent")
       .on("mouseover", d => { 
+        // when the mouse rolls over this feature, do this
         state.tooltip['state'] = d.properties.NAME
-        draw() // re-call the draw function when we   set a new hoveredState
+        draw() // re-call the draw function when we set a new hoveredState
       })
 
+  svg.selectAll(".point")
+    .data(state.extremes)
+    .join("circle")
+      // our projection can be used to return a point, [x, y], in pixels 
+      .attr("cx", d => projection([d.Long, d.Lat])[0])
+      .attr("cy", d => projection([d.Long, d.Lat])[1])
+      .attr("r", 3)
+      .attr("class", "point")
+      .attr("stroke", "grey")
+      // .attr("fill", d => changeColorScale(d['Change in 95 percent Days']))
+
+  // this triggers any movement at all while on the svg
   svg.on("mousemove", d => {
+    // we can use d3.mouse() to tell us the exact x and y positions of our cursor
     const [mx, my] = d3.mouse(svg.node())
+    // projection can be inverted to return [lat, long] from [x, y] in pixels
     const proj = projection.invert([mx, my])
     state.tooltip['lattitude'] = proj[0],
     state.tooltip['longitude'] = proj[1]
-    draw()
+    draw() // re-call the draw function when we set a new hoveredState
   })
 
   draw(); // calls the draw function
