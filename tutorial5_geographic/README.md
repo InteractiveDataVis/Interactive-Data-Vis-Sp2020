@@ -2,9 +2,9 @@
 
 The goals for this tutorial are:
 
-- xxx
-- xxx
-- xxx
+- To explore geojson data, and how geographical features on our earth translate to projected shapes on an svg. 
+- To understand [projections](https://github.com/d3/d3-geo#projections), in conjunction with [d3.geo-path](https://github.com/d3/d3-geo#geoPath), transforms lattitude and longitude space into pixel space.
+- To grasp that d3.js svg maps are as simple as lines and circles, and can be manipulated as such, with stroke, fill, etc. 
 
 ## How to setup, serve, and deploy:
 
@@ -52,9 +52,9 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 ## Week 5 Assignment:
 
-- [ ] Implement your own map visualizing _a different dataset_ than the one used in our demo.
+- [ ] Implement your own version of the map, using the us state geojson data provided in the [data folder](../data/).
 
-- [ ] xxx
+- [ ] Using your own lat/long dataset _OR_ the provided dataset for this exercise, [`usHeatExtremes.csv`](../data/usHeatExtremes.csv) (also in the [data folder](../data/)), add points to your map. *HINT:* since we're still in svg, we can just add circles to the map, like we've done before, but you'll need to [invert your projection](https://github.com/d3/d3-geo#projection_invert) to place them. 
 
 - [ ] Make intentional design decisions -- colors, sizes, axes, transitions, etc. should illustrate something interesting about or relevant to your data.
 
@@ -62,9 +62,9 @@ As you're working on the assignment, you can always reference the [demo code](de
 
 **BONUS:**
 
-- [ ] xxx
+- [ ] Add another data element to your map, such as using color or radius to represent a value, [like this](https://observablehq.com/@d3/bubble-map). 
 
-- [ ] xxx
+- [ ] Implement transitions on your points, so the map begins blank, then they appear in a thoughtful way. 
 
 ### Deploy
 
@@ -74,9 +74,7 @@ To receive full credit, you must post your stable path before the start of the n
 
 ## Resources:
 
-[d3 line](https://github.com/d3/d3-shape#lines)
-
-[d3 area](https://github.com/d3/d3-shape#areas)
+[d3 geo](https://github.com/d3/d3-geo)
 
 [d3 scales](https://github.com/d3/d3-scale)
 
