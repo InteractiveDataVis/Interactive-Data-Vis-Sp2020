@@ -15,6 +15,13 @@ let xScale;
 let yScale;
 let yAxis;
 
+/* 
+this extrapolated function allows us to replace the "G" with "B" min the case of billions.
+we cannot do this in the .tickFormat() because we need to pass a function as an argument, 
+and replace needs to act on the text (result of the function). 
+*/
+const formatBillions = (num) => d3.format(".2s")(num).replace(/G/, 'B')
+
 /**
  * APPLICATION STATE
  * */
@@ -54,7 +61,7 @@ function init() {
 
   // AXES
   const xAxis = d3.axisBottom(xScale);
-  yAxis = d3.axisLeft(yScale).tickFormat(d3.format(".2s"));
+  yAxis = d3.axisLeft(yScale).tickFormat(formatBillions);
 
   // UI ELEMENT SETUP
   const selectElement = d3.select("#dropdown").on("change", function() {
