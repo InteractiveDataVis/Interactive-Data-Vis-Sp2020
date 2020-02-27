@@ -68,17 +68,6 @@ function init() {
         draw() // re-call the draw function when we set a new hoveredState
       })
 
-  svg.selectAll(".point")
-    .data(state.extremes)
-    .join("circle")
-      // our projection can be used to return a point, [x, y], in pixels 
-      .attr("cx", d => projection([d.Long, d.Lat])[0])
-      .attr("cy", d => projection([d.Long, d.Lat])[1])
-      .attr("r", 3)
-      .attr("class", "point")
-      .attr("stroke", "grey")
-      // .attr("fill", d => changeColorScale(d['Change in 95 percent Days']))
-
   // this triggers any movement at all while on the svg
   svg.on("mousemove", d => {
     // we can use d3.mouse() to tell us the exact x and y positions of our cursor
