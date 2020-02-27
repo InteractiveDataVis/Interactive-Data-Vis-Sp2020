@@ -42,17 +42,17 @@ Promise.all([
  * this will be run *one time* when the data finishes loading in
  * */
 function init() {
+  // our projection and path are only defined once, and we don't need to access them in the draw function,
+  // so they can be locally scoped to init()
+  const projection = d3.geoAlbersUsa().fitSize([width, height], state.geojson);
+  const path = d3.geoPath().projection(projection);
+
   // create an svg element in our main `d3-container` element
   svg = d3
     .select("#d3-container")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-  // our projection and path are only defined once, and we don't need to access them in the draw function,
-  // so they can be locally scoped to init()
-  const projection = d3.geoAlbersUsa().fitSize([width, height], state.geojson);
-  const path = d3.geoPath().projection(projection);
 
   svg
     .selectAll(".state")
@@ -89,7 +89,8 @@ function init() {
     const [mx, my] = d3.mouse(svg.node());
     // projection can be inverted to return [lat, long] from [x, y] in pixels
     const proj = projection.invert([mx, my]);
-    (state.hover["longitude"] = proj[0]), (state.hover["latitude"] = proj[1]);
+    state.hover["longitude"] = proj[0];
+    state.hover["latitude"] = proj[1];
     draw();
   });
 
