@@ -18,6 +18,18 @@ let state = {
  * LOAD DATA
  * */
 d3.csv("../../data/netflix_titles.csv", d3.autotype).then(data => {
+  console.log(data);
+
+  const rolledUp = d3.rollups(
+    data,
+    v => v,
+    d => d.listed_in.split(",")[0],
+    d => d.rating
+  );
+
+  console.log(rolledUp);
+
+  const hierarchy = d3.hierarchy([null]);
   init();
 });
 
