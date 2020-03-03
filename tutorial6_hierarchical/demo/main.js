@@ -11,25 +11,14 @@ let svg;
  * APPLICATION STATE
  * */
 let state = {
-  geojson: null,
+  root: null,
 };
 
 /**
  * LOAD DATA
  * */
-d3.csv("../../data/netflix_titles.csv", d3.autotype).then(data => {
-  console.log(data);
-
-  const rolledUp = d3.rollups(
-    data,
-    v => v,
-    d => d.listed_in.split(",")[0],
-    d => d.rating
-  );
-
-  console.log(rolledUp);
-
-  const hierarchy = d3.hierarchy([null]);
+d3.csv("../../data/netflix_titles_with_genre.csv", d3.autotype).then(data => {
+  state.data = data;
   init();
 });
 
@@ -51,4 +40,45 @@ function init() {
  * DRAW FUNCTION
  * we call this everytime there is an update to the data/state
  * */
-function draw() {}
+function draw() {
+  // groups the data by genre, type and rating
+  const rolledUp = d3.rollups(
+    state.data,
+    v => v.length, // reduce function
+    d => d.genre,
+    d => d.type,
+    d => d.rating,
+    d => d.title
+  );
+
+  // reference: https://observablehq.com/@mbostock/2019-h-1b-employers
+  const root = d3
+    .hierarchy([null, rolledUp], ([parent, children]) => children) // children accessor
+    .count() // sets the 'value' of each level
+    .sort((a, b) => b.value - a.value);
+
+  // make pack generator
+  const pack = d3
+    .pack()
+    .size([width, height])
+    .padding(1)(root);
+
+  // make hierarchy
+  svg
+    .append("g")
+    .attr("fill", "#ccc")
+    .selectAll("circle")
+    .data(root.leaves())
+    .join("circle")
+    .attr("transform", d => `translate(${d.x},${d.y})`)
+    .attr("r", d => d.r)
+    .append("title")
+    .text(
+      d =>
+        `${d
+          .ancestors()
+          .map(d => d.data[0])
+          .reverse()
+          .join("/")}\n${d.value}`
+    );
+}
