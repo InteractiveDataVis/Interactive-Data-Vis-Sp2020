@@ -3,8 +3,7 @@
  * */
 const width = window.innerWidth * 0.9,
   height = window.innerHeight * 0.7,
-  margin = { top: 20, bottom: 50, left: 60, right: 40 },
-  tooltipSpecs = { width: 100, height: 50 };
+  margin = { top: 20, bottom: 50, left: 60, right: 40 };
 
 let svg;
 let tooltip;
@@ -15,6 +14,7 @@ let tooltip;
 let state = {
   data: null,
   hover: null,
+  mousePosition: null
 };
 
 /**
@@ -34,10 +34,10 @@ function init() {
 
   tooltip = container
     .append("div")
+    .attr("class", "tooltip")
     .attr("width", 100)
     .attr("height", 100)
     .style("position", "absolute")
-    .style("background-color", "white");
 
   svg = container
     .append("svg")
@@ -61,24 +61,12 @@ function init() {
   // call our generator on our root hierarchy node
   tree(root); // creates our coordinates and dimensions based on the heirarchy and tiling algorithm
 
-  console.log(root);
-
   // create g for each leaf
   const leaf = svg
     .selectAll("g")
     .data(root.leaves())
     .join("g")
     .attr("transform", d => `translate(${d.x0},${d.y0})`);
-
-  // create title for each node
-  leaf.append("title").text(
-    d =>
-      `${d
-        .ancestors()
-        .reverse()
-        .map(d => d.data.name)
-        .join("/")}\n${d.value}`
-  );
 
   leaf
     .append("rect")
@@ -94,6 +82,11 @@ function init() {
         ],
         name: d.data.name,
         value: d.data.value,
+        title: `${d
+          .ancestors()
+          .reverse()
+          .map(d => d.data.name)
+          .join("/")}\n${d.value}`
       };
       draw();
     });
