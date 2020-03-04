@@ -11,13 +11,13 @@ let svg;
  * APPLICATION STATE
  * */
 let state = {
-  root: null,
+  data: null,
 };
 
 /**
  * LOAD DATA
  * */
-d3.csv("../../data/netflix_titles_with_genre.csv", d3.autotype).then(data => {
+d3.json("../../data/flare.json", d3.autotype).then(data => {
   state.data = data;
   init();
 });
@@ -33,6 +33,48 @@ function init() {
     .attr("width", width)
     .attr("height", height);
 
+  // groups the data by genre, type and rating
+  // make hierarchy
+  const root = d3
+    .hierarchy(state.data) // children accessor
+    .count() // sets the 'value' of each level
+    .sort((a, b) => b.value - a.value);
+
+  // make treemap layout generator
+  const tree = d3
+    .treemap()
+    .size([width, height])
+    .padding(1)
+    .round(true);
+
+  // call our generator on our root hierarchy node
+  tree(root); // creates our coordinates and dimensions based on the heirarchy and tiling algorithm
+
+  console.log(root);
+
+  // create g for each leaf
+  const leaf = svg
+    .selectAll("g")
+    .data(root.leaves())
+    .join("g")
+    .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+  // create title for each node
+  leaf.append("title").text(
+    d =>
+      `${d
+        .ancestors()
+        .reverse()
+        .map(d => d.data.name)
+        .join("/")}\n${d.value}`
+  );
+
+  leaf
+    .append("rect")
+    .attr("fill-opacity", 0.6)
+    .attr("width", d => d.x1 - d.x0)
+    .attr("height", d => d.y1 - d.y0);
+
   draw(); // calls the draw function
 }
 
@@ -40,45 +82,4 @@ function init() {
  * DRAW FUNCTION
  * we call this everytime there is an update to the data/state
  * */
-function draw() {
-  // groups the data by genre, type and rating
-  const rolledUp = d3.rollups(
-    state.data,
-    v => v.length, // reduce function
-    d => d.genre,
-    d => d.type,
-    d => d.rating,
-    d => d.title
-  );
-
-  // reference: https://observablehq.com/@mbostock/2019-h-1b-employers
-  const root = d3
-    .hierarchy([null, rolledUp], ([parent, children]) => children) // children accessor
-    .count() // sets the 'value' of each level
-    .sort((a, b) => b.value - a.value);
-
-  // make pack generator
-  const pack = d3
-    .pack()
-    .size([width, height])
-    .padding(1)(root);
-
-  // make hierarchy
-  svg
-    .append("g")
-    .attr("fill", "#ccc")
-    .selectAll("circle")
-    .data(root.leaves())
-    .join("circle")
-    .attr("transform", d => `translate(${d.x},${d.y})`)
-    .attr("r", d => d.r)
-    .append("title")
-    .text(
-      d =>
-        `${d
-          .ancestors()
-          .map(d => d.data[0])
-          .reverse()
-          .join("/")}\n${d.value}`
-    );
-}
+function draw() {}
