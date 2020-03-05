@@ -10,7 +10,7 @@ The goals for this tutorial are:
 
 [Please reference previous tutorials, we assume you know how to do this already]
 
-## Week 5 Assignment:
+## Week 6 Assignment:
 
 - [ ] Implement your own version of the treemap we made in class using the [`flare.json`](../data/flare.json) dataset provided (or if you are up for the challenge create your own dataset).
 
