@@ -14,7 +14,7 @@ let tooltip;
 let state = {
   data: null,
   hover: null,
-  mousePosition: null
+  mousePosition: null,
 };
 
 /**
@@ -37,12 +37,14 @@ function init() {
     .attr("class", "tooltip")
     .attr("width", 100)
     .attr("height", 100)
-    .style("position", "absolute")
+    .style("position", "absolute");
 
   svg = container
     .append("svg")
     .attr("width", width)
     .attr("height", height);
+
+  const colorScale = d3.scaleOrdinal(d3.schemeSet3);
 
   // make hierarchy
   const root = d3
@@ -69,7 +71,10 @@ function init() {
 
   leaf
     .append("rect")
-    .attr("fill-opacity", 0.6)
+    .attr("fill", d => {
+      const level1Ancestor = d.ancestors().find(d => d.depth === 1);
+      return colorScale(level1Ancestor.data.name);
+    })
     .attr("width", d => d.x1 - d.x0)
     .attr("height", d => d.y1 - d.y0)
     .on("mouseover", d => {
@@ -85,7 +90,7 @@ function init() {
           .ancestors()
           .reverse()
           .map(d => d.data.name)
-          .join("/")}\n${d.value}`
+          .join("/")}`,
       };
       draw();
     });
@@ -104,6 +109,7 @@ function draw() {
         `
         <div>Name: ${state.hover.name}</div>
         <div>Value: ${state.hover.value}</div>
+        <div>Hierarchy Path: ${state.hover.title}</div>
       `
       )
       .transition()
