@@ -44,7 +44,6 @@ function init() {
     .attr("width", width)
     .attr("height", height);
 
-  // groups the data by genre, type and rating
   // make hierarchy
   const root = d3
     .hierarchy(state.data) // children accessor
@@ -76,7 +75,7 @@ function init() {
     .on("mouseover", d => {
       state.hover = {
         translate: [
-          // center tooltip in rect
+          // center top left corner of the tooltip in center of tile
           d.x0 + (d.x1 - d.x0) / 2,
           d.y0 + (d.y1 - d.y0) / 2,
         ],
