@@ -41,6 +41,12 @@ function init() {
     .attr("width", width)
     .attr("height", height);
 
+  const uniqueGenres = [...new Set(state.data.map(d => d.genre))];
+  const colorScale = d3
+    .scaleOrdinal()
+    .domain(uniqueGenres)
+    .range(d3.schemeSet3);
+
   const rolledUp = d3.rollups(
     state.data,
     v => ({ count: v.length, movies: v }), // reduce function,
@@ -50,6 +56,7 @@ function init() {
   );
 
   console.log("rolledUp", rolledUp);
+
   // groups the data by genre, type and rating
   // make hierarchy
   const root = d3
@@ -79,6 +86,7 @@ function init() {
   leaf
     .append("rect")
     .attr("fill-opacity", 0.6)
+    .attr("fill", d => colorScale(d.data[1].movies[0].genre)) // take the genre from the first one in the group
     .attr("width", d => d.x1 - d.x0)
     .attr("height", d => d.y1 - d.y0)
     .on("mouseover", d => {
