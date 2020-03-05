@@ -4,9 +4,13 @@ body {
   padding: 1em 3em;
 }
 
-#tooltip {
+.tooltip {
   display: block;
-  height: 50px;
+  height: fit-content;
+  background-color: white;
+  opacity: 0.8;
+  pointer-events: none;
+  padding: 5px;
 }
 
 path.state {
