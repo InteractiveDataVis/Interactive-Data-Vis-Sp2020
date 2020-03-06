@@ -12,7 +12,8 @@ let tooltip;
  * APPLICATION STATE
  * */
 let state = {
-  // + INITIALIZE STATE
+  data: null,
+  hover: null,
 };
 
 /**
@@ -30,28 +31,64 @@ d3.json("../../data/flare.json", d3.autotype).then(data => {
 function init() {
   const container = d3.select("#d3-container").style("position", "relative");
 
+  tooltip = container
+    .append("div")
+    .attr("class", "tooltip")
+    .attr("width", 100)
+    .attr("height", 100)
+    .style("position", "absolute");
+
   svg = container
     .append("svg")
     .attr("width", width)
     .attr("height", height);
 
-  // + INITIALIZE TOOLTIP IN YOUR CONTAINER ELEMENT
+  const root = d3.hierarchy(state.data)
+    .sum(d => d.value)
+    .sort((a,b) => b.value - a.value)
 
-  // + CREATE YOUR ROOT HIERARCHY NODE
+  const treeGen = d3.treemap()
+    .size([width, height])
+    .padding(1)
 
-  // + CREATE YOUR LAYOUT GENERATOR
+  treeGen(root)
 
-  // + CALL YOUR LAYOUT FUNCTION ON YOUR ROOT DATA
+  const leaf = svg.selectAll("g.leaf") 
+    .data(root.leaves())
+    .join("g")
+    .attr("class", "leaf")
+    .attr("transform", d => `translate(${d.x0},${d.y0})`)
 
-  // + CREATE YOUR GRAPHICAL ELEMENTS
+  leaf.append("rect")
+    .attr("height", d => d.y1 - d.y0)
+    .attr("width", d => d.x1 - d.x0)
+    .on("mouseover", d => {
+      state.hover = {
+        name: d.data.name,
+        x: d.x1,
+        y: d.y1,
+      };
+      draw();
+    })
+
+  leaf.append("text")
+    .text(d => d.data.name)
+    .style("dominant-baseline", "hanging")
+    .style("fill", "white")
 
   draw(); // calls the draw function
 }
 
-/**
- * DRAW FUNCTION
- * we call this everytime there is an update to the data/state
- * */
+/* DRAW FUNCTION */
 function draw() {
-  // + UPDATE TOOLTIP
+
+  if (state.hover) {
+    tooltip
+      .html(`  
+        <div>${state.hover.name}</div>
+      `)
+      .transition()
+      .duration(500)
+      .style("transform", `translate(${state.hover.x}px, ${state.hover.y}px)`)
+  }
 }
