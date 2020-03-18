@@ -1,13 +1,14 @@
-class Graph {
+class Barchart {
+
   constructor(state, setGlobalState) {
     // initialize properties here
     this.width = (window.innerWidth * 1.8) / 3;
-    this.height = window.innerHeight * 0.6;
+    this.height = window.innerHeight * 0.4;
     this.margins = { top: 20, bottom: 20, left: 20, right: 20 };
     this.duration = 1000;
 
     this.svg = d3
-      .select("#chart")
+      .select("#barchart")
       .append("svg")
       .attr("width", this.width)
       .attr("height", this.height);
@@ -20,29 +21,29 @@ class Graph {
       state.selectedCountry ? d.countryRegion === state.selectedCountry : true
     );
 
-    this.metrics = ["confirmed", "recovered", "deaths"];
+    const metrics = ["confirmed", "recovered", "deaths"];
 
-    this.totalsData = this.metrics.map(metric => {
+    const totalsData = metrics.map(metric => {
       return {
         metric: metric,
         sum: d3.sum(filteredData, d => d[metric]),
       };
     });
 
-    this.yScale = d3
+    const yScale = d3
       .scaleLinear()
-      .domain([0, d3.max(this.totalsData, d => d.sum)])
-      .range([this.height - this.margins.bottom, this.margins.top]);
+      .domain([0, d3.max(totalsData, d => d.sum)])
+      .range([this.height - this.margins.top, this.margins.bottom]);
 
-    this.xScale = d3
+    const xScale = d3
       .scaleBand()
-      .domain(this.metrics)
+      .domain(metrics)
       .range([this.margins.left, this.width - this.margins.right])
       .paddingInner(0.05);
 
-    this.bars = this.svg
+    const bars = this.svg
       .selectAll("g.bar")
-      .data(this.totalsData)
+      .data(totalsData)
       .join(
         enter =>
           enter
@@ -54,26 +55,26 @@ class Graph {
         exit => exit.remove()
       );
 
-    this.bars
+    bars
       .transition()
       .duration(this.duration)
       .attr(
         "transform",
-        d => `translate(${this.xScale(d.metric)}, ${this.yScale(d.sum)})`
+        d => `translate(${xScale(d.metric)}, ${yScale(d.sum)})`
       );
 
-    this.bars
+    bars
       .select("rect")
       .transition()
       .duration(this.duration)
-      .attr("width", this.xScale.bandwidth())
-      .attr("height", d => this.height - this.yScale(d.sum));
+      .attr("width", xScale.bandwidth())
+      .attr("height", d => this.height - yScale(d.sum));
 
-    this.bars
+    bars
       .select("text")
       .attr("dy", "-.5em")
       .text(d => `${d.metric}: ${d.sum}`);
   }
 }
 
-export { Graph };
+export { Barchart };

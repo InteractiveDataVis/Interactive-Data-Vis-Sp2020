@@ -1,8 +1,9 @@
 // import our components
 import { Table } from "./Table.js";
-import { Graph } from "./Graph.js";
+import { Barchart } from "./Barchart.js";
+import { Count } from "./Count.js";
 
-let table, graph;
+let table, barchart, count;
 
 // global state
 let state = {
@@ -19,13 +20,15 @@ d3.json("https://covid19.mathdro.id/api/confirmed", d3.autoType).then(data => {
 
 function init() {
   table = new Table(state, setGlobalState);
-  graph = new Graph(state, setGlobalState);
+  barchart = new Barchart(state, setGlobalState);
+  count = new Count(state, setGlobalState);
   draw();
 }
 
 function draw() {
   table.draw(state);
-  graph.draw(state);
+  barchart.draw(state);
+  count.draw(state);
 }
 
 // UTILITY FUNCTION: state updating function that we pass to our components so that they are able to update our global state object

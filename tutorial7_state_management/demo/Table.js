@@ -49,8 +49,8 @@ class Table {
     });
   }
 
-  draw(state) {
-    console.log("now I am drawing my table");
+  draw(state, setGlobalState) {
+    console.log("now I am drawing my barchart");
 
     // update the row to display selected country
     this.tableRows.style("background-color", ([country, value]) =>
