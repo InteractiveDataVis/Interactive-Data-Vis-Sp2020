@@ -4,9 +4,21 @@ body {
   padding: 1em 3em;
 }
 
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2em;
+}
+
 #table {
   width: 300px;
 }
+
+#chart {
+  padding-top: 3em;
+}
+
+/* Table styles */
 thead,
 tbody tr {
   display: table;
@@ -33,4 +45,9 @@ td {
 
 tr:hover {
   font-weight: 900;
+}
+
+/* Chart styles */
+rect {
+  fill: #ccc;
 }

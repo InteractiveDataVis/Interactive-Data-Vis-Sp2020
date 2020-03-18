@@ -1,24 +1,19 @@
 class Table {
-  // initialize properties here
-  colorScale;
-  table;
-  tableRows;
-
   constructor(state, setGlobalState) {
     // aggregate totals per country
     // creates an array where of rows such as [country, value]
     const countryData = d3
       .rollups(
         state.data,
-        v => d3.sum(v.map(d => d.total)),
-        d => d.country
+        v => d3.sum(v.map(d => d.confirmed)),
+        d => d.countryRegion
       )
       .sort((a, b) => d3.descending(a[1], b[1]));
 
     // first map our values to a logarithmic scale
     const logScale = d3
       .scaleSymlog() // like a logScale but can handle 0 in the domain without throwing NaN
-      .domain(d3.extent(countryData, ([country, total]) => total))
+      .domain(d3.extent(countryData, ([country, confirmed]) => confirmed))
       .range([0.5, 1]); // to use only the darker half of the color scale
 
     // use that logarithmic scale in our color interpolator
