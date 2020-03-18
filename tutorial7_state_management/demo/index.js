@@ -2,32 +2,58 @@
 import { Table } from "./Table.js";
 import { Graph } from "./Graph.js";
 
-// initialize components
-// (since we don't have the data or setState function yet, we only initialize the component names)
-let table;
-let graph;
+let table, graph;
 
-// global state, which we update with data
-let state;
+// global state
+let state = {
+  data: [],
+  selectedCountry: null,
+};
 
-// data load
-Promise.all([
-  d3.json("../../data/DATA"),
-]).then(([ data ]) => {
-  state = { data };
-  // we want to pass in the setState function so we have the ability to set GLOBAL state from within each component
-  table = new Table(state, setState);
-  graph = new Graph(state, setState);
-});
+// pulling live from updating github site
+d3.csv(
+  "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv",
+  d3.autoType
+)
+  .then(data =>
+    data.map(d => {
+      const {
+        "Province/State": province,
+        "Country/Region": country,
+        Lat: lat,
+        Long: long,
+        ...days // destructures everything that is left into a variable called 'days'
+      } = d;
+      return {
+        province,
+        country,
+        lat,
+        long,
+        days,
+        total: d3.max(Object.values(days)), // these are cumulative, so we want the latest one
+      };
+    })
+  )
+  .then(data => {
+    state.data = data;
+    console.log("data", data);
+    init();
+  });
 
-// state updating function that we pass to our components so that they are able to update our global state object
-function setState(nextState) {
+function init() {
+  table = new Table(state, setGlobalState);
+  graph = new Graph(state, setGlobalState);
+  draw();
+}
 
-  // this allows us to keep all other items of state when we update it, rather than overwriting all other items that we aren't setting in that function call
-  state = Object.assign({}, state, nextState);
+function draw() {
+  table.draw(state);
+  graph.draw(state);
+}
+
+// UTILITY FUNCTION: state updating function that we pass to our components so that they are able to update our global state object
+function setGlobalState(nextState) {
+  state = { ...state, ...nextState };
   console.log("new state:", state);
-
-  // pass this to all components
-  table.update(state);
-  graph.update(state);
+  draw();
 }
