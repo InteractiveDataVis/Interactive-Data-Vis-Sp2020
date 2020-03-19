@@ -8,13 +8,20 @@ let table, barchart, count;
 // global state
 let state = {
   data: [],
-  selectedCountry: null,
+  domain: [],
+  selectedState: null,
+  selectedMetric: null,
 };
 
-// pulling live from updating github site
-d3.json("https://covid19.mathdro.id/api/confirmed", d3.autoType).then(data => {
-  state.data = data;
+d3.csv("../../data/statePopulations.csv", d3.autoType).then(data => {
   console.log("data", data);
+  state.data = data;
+  state.domain = [
+    0, 
+    d3.max(data
+      .map(d => [d["Age < 20"], d["Age 20-65"], d["Age 65+"]])
+      .flat()
+    )]
   init();
 });
 
@@ -27,8 +34,8 @@ function init() {
 
 function draw() {
   table.draw(state);
-  barchart.draw(state);
-  count.draw(state);
+  barchart.draw(state, setGlobalState);
+  count.draw(state, setGlobalState);
 }
 
 // UTILITY FUNCTION: state updating function that we pass to our components so that they are able to update our global state object

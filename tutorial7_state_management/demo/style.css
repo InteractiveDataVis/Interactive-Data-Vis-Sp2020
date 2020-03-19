@@ -12,7 +12,6 @@ body {
 }
 
 #table {
-  width: 300px;
   grid-row-start: 1;
   grid-row-end: span 2;
 }
@@ -50,11 +49,6 @@ tr:hover {
   font-weight: 900;
 }
 
-/* Barchart styles */
-rect {
-  fill: #ccc;
-}
-
 /* Count styles */
 #count {
   display: flex;
@@ -67,5 +61,6 @@ rect {
 }
 
 .metric > .number {
+  color: #ccc;
   font-size: 25px;
 }
