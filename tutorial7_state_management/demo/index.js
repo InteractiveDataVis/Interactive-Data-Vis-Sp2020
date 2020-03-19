@@ -1,54 +1,41 @@
 // import our components
 import { Table } from "./Table.js";
-import { Graph } from "./Graph.js";
+import { Barchart } from "./Barchart.js";
+import { Count } from "./Count.js";
 
-let table, graph;
+let table, barchart, count;
 
 // global state
 let state = {
   data: [],
-  selectedCountry: null,
+  domain: [],
+  selectedState: null,
+  selectedMetric: null,
 };
 
-// pulling live from updating github site
-d3.csv(
-  "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv",
-  d3.autoType
-)
-  .then(data =>
-    data.map(d => {
-      const {
-        "Province/State": province,
-        "Country/Region": country,
-        Lat: lat,
-        Long: long,
-        ...days // destructures everything that is left into a variable called 'days'
-      } = d;
-      return {
-        province,
-        country,
-        lat,
-        long,
-        days,
-        total: d3.max(Object.values(days)), // these are cumulative, so we want the latest one
-      };
-    })
-  )
-  .then(data => {
-    state.data = data;
-    console.log("data", data);
-    init();
-  });
+d3.csv("../../data/statePopulations.csv", d3.autoType).then(data => {
+  console.log("data", data);
+  state.data = data;
+  state.domain = [
+    0, 
+    d3.max(data
+      .map(d => [d["Age < 20"], d["Age 20-65"], d["Age 65+"]])
+      .flat()
+    )]
+  init();
+});
 
 function init() {
   table = new Table(state, setGlobalState);
-  graph = new Graph(state, setGlobalState);
+  barchart = new Barchart(state, setGlobalState);
+  count = new Count(state, setGlobalState);
   draw();
 }
 
 function draw() {
   table.draw(state);
-  graph.draw(state);
+  barchart.draw(state, setGlobalState);
+  count.draw(state, setGlobalState);
 }
 
 // UTILITY FUNCTION: state updating function that we pass to our components so that they are able to update our global state object

@@ -4,9 +4,23 @@ body {
   padding: 1em 3em;
 }
 
-#table {
-  width: 300px;
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr, 1fr;
+  column-gap: 2em;
 }
+
+#table {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+#barchart, #count {
+  padding-top: 1em;
+}
+
+/* Table styles */
 thead,
 tbody tr {
   display: table;
@@ -18,7 +32,7 @@ tbody tr {
 tbody {
   width: 100%;
   display: block;
-  height: 80vh;
+  height: 70vh;
   overflow: scroll;
 }
 
@@ -33,4 +47,20 @@ td {
 
 tr:hover {
   font-weight: 900;
+}
+
+/* Count styles */
+#count {
+  display: flex;
+  flex-direction: row;
+}
+
+.metric {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.metric > .number {
+  color: #ccc;
+  font-size: 25px;
 }
