@@ -7,15 +7,17 @@ body {
 #dashboard {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr, 1fr;
   column-gap: 2em;
 }
 
 #table {
-  width: 300px;
+  grid-row-start: 1;
+  grid-row-end: span 2;
 }
 
-#chart {
-  padding-top: 3em;
+#barchart, #count {
+  padding-top: 1em;
 }
 
 /* Table styles */
@@ -30,7 +32,7 @@ tbody tr {
 tbody {
   width: 100%;
   display: block;
-  height: 80vh;
+  height: 70vh;
   overflow: scroll;
 }
 
@@ -47,7 +49,18 @@ tr:hover {
   font-weight: 900;
 }
 
-/* Chart styles */
-rect {
-  fill: #ccc;
+/* Count styles */
+#count {
+  display: flex;
+  flex-direction: row;
+}
+
+.metric {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.metric > .number {
+  color: #ccc;
+  font-size: 25px;
 }
