@@ -1,0 +1,66 @@
+body {
+  /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1em 3em;
+}
+
+#dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr, 1fr;
+  column-gap: 2em;
+}
+
+#table {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+#barchart, #count {
+  padding-top: 1em;
+}
+
+/* Table styles */
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-bottom: 1px solid white;
+}
+
+tbody {
+  width: 100%;
+  display: block;
+  height: 70vh;
+  overflow: scroll;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+  cursor: pointer;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+
+tr:hover {
+  font-weight: 900;
+}
+
+/* Count styles */
+#count {
+  display: flex;
+  flex-direction: row;
+}
+
+.metric {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.metric > .number {
+  color: #ccc;
+  font-size: 25px;
+}

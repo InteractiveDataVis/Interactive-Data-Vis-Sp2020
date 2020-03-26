@@ -9,7 +9,7 @@ The goals for this tutorial are:
 
 ## How to setup, serve, and deploy:
 
-[Please reference previous tutorials, we assume you know how to do this already]
+(Please reference previous tutorials, we assume you know how to do this already)
 
 ## Week 5 Assignment:
 
